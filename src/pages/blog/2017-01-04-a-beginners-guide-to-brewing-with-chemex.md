@@ -1,10 +1,8 @@
 ---
 templateKey: blog-post
-title: A beginners’ guide to brewing with Cemex
+title: Beginners Guide To Netlify CMS
 date: 2017-01-04T15:04:10.000Z
-description: Brewing with a Chemex probably seems like a complicated,
-  time-consuming ordeal, but once you get used to the process, it becomes a
-  soothing ritual that's worth the effort every time.
+description: "A simple guide to get started with Netlify CMS using Gatsby. "
 featuredpost: true
 featuredimage: /img/chemex.jpg
 tags:
