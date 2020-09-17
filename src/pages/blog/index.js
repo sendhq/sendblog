@@ -10,7 +10,7 @@ export default class BlogIndexPage extends React.Component {
         <div
           className="full-width-image-container margin-top-20"
           style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
+            backgroundImage: `url('/img/cover.jpg')`,
           }}
         >
           <h1
@@ -23,7 +23,7 @@ export default class BlogIndexPage extends React.Component {
               borderRadius:' 3px'
             }}
           >
-            Blog
+            Send's Blog
           </h1>
         </div>
         <section className="section">
