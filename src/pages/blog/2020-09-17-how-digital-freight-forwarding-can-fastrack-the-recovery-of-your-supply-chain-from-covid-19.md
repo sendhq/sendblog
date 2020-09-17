@@ -20,7 +20,11 @@ tags:
 
 Normal isn’t available to us anymore and ‘business as usual’ even less. The new reality taking shape is made of complexity, uncertainty, and opportunities. To adapt and thrive, businesses must accelerate and become agile. From a technology perspective, these massive challenges can be turned into meaningful optimization for the freight supply chain.
 
+
+
 > With digitalisation already accelerating globally as a result of the crisis, we believe the future of the traditional freight forwarder is more precarious than ever. The already existing problems in traditional freight forwarding are more intensified this time - low visibility, high unpredictability, not enough control. But your business needs to move, faster.
+>
+>
 
 ### One simple platform to do it all
 
@@ -34,8 +38,6 @@ It can take up to 100 hours to finally get a price quote for your cargo traditio
 
 Instead of time-consuming paperwork, digital forwarding now offers to collect all documents within its secure cloud. It enables collaboration so that you can share documents such as the bill of lading, invoices or a packing list with third parties. It has all the important documents in one secure place and avoids sending emails with attachments back and forth … that’s cool, isn’t it?
 
-
-
 ### Shipment tracking
 
 Through digital freight forwarding, everyone is on the same level and customers always know where their cargo is to communicate with their customers or whoever awaits the shipment.
@@ -47,7 +49,5 @@ Shippers and Forwarders could win significant cost savings through automating th
 ### Automated Shipping
 
 From booking to delivery, digital forwarding automates shipment such that no human contact occurs among all involved in the shipping process, enabling easy business interaction during this pandemic.
-
-
 
 <!--EndFragment-->
