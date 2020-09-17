@@ -23,7 +23,7 @@ export default class BlogIndexPage extends React.Component {
               borderRadius:' 3px'
             }}
           >
-            Send's Blog
+            Blog
           </h1>
         </div>
         <section className="section">
