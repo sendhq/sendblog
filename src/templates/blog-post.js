@@ -50,9 +50,8 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-          
-            <div style={{position:'fixed', right:30, top:'30%', justifyContent:'center', alignItems:'center', textAlign:'center'}} className="column">
-                <h3>Share via</h3>
+            <h3>Share via</h3>
+            <div className=" social-section">
                 <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(twitterLink)} onClick={() => handleLinkClick(fb)}>
                   <img
                     src={facebook}

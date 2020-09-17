@@ -2,6 +2,8 @@
 .myFooter {
     padding-top: 50px;
     background-color: #0747a6;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .navbar-button {
@@ -81,4 +83,12 @@
 	font-size: 12px !important;
     margin-top: 6px; 
 	color: #000000c7 !important;
+}
+
+.social-section {
+    display: flex !important;
+}
+
+.social-section > div {
+    margin: 5px;
 }
