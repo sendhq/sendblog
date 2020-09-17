@@ -22,9 +22,13 @@ Normal isn’t available to us anymore and ‘business as usual’ even less. Th
 
 
 
+
+
 > With digitalisation already accelerating globally as a result of the crisis, we believe the future of the traditional freight forwarder is more precarious than ever. The already existing problems in traditional freight forwarding are more intensified this time - low visibility, high unpredictability, not enough control. But your business needs to move, faster.
->
->
+
+
+
+
 
 ### One simple platform to do it all
 
