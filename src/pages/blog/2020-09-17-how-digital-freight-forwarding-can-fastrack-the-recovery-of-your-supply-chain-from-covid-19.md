@@ -28,7 +28,7 @@ It has been quite harder since the past months but everyone deserves peace of mi
 
 ### Instant Price Quotation
 
-It can take up to 100 hours to finally get a price quote for your cargo traditional freight forwarders (how about during this time). Digital freight forwarding has an instant freight quote engine to provide pricing within seconds instead of days and hours, giving customers 100% transparency and can instantly book a shipment on their website. And on our website for instance, freight booking is now similar to booking a hotel or a flight. **[](https://bit.ly/sendRFQ)[Get an instant quote now](https://bit.ly/sendRFQ)**
+It can take up to 100 hours to finally get a price quote for your cargo traditional freight forwarders (how about during this time). Digital freight forwarding has an instant freight quote engine to provide pricing within seconds instead of days and hours, giving customers 100% transparency and can instantly book a shipment on their website. And on our website for instance, freight booking is now similar to booking a hotel or a flight. [](https://bit.ly/sendRFQ)**[Get an instant quote now](https://bit.ly/sendRFQ)**
 
 ### Seamless documentation handling
 
@@ -38,6 +38,8 @@ Instead of time-consuming paperwork, digital forwarding now offers to collect al
 
 Through digital freight forwarding, everyone is on the same level and customers always know where their cargo is to communicate with their customers or whoever awaits the shipment.
 
+![automated-shipping](/img/automated_shipping.png "Automated Shipping")
+
 ### Automated invoicing
 
 Shippers and Forwarders could win significant cost savings through automating the auditing of freight payments and invoicing. Thereby they could save a significant amount per invoice and make sure each invoice is correct which is a huge step according to SWG who claim that 20% of the invoices in freight and logistics are incorrect.
@@ -45,8 +47,6 @@ Shippers and Forwarders could win significant cost savings through automating th
 ### Automated Shipping
 
 From booking to delivery, digital forwarding automates shipment such that no human contact occurs among all involved in the shipping process, enabling easy business interaction during this pandemic.
-
-
 
 \----------------------
 
