@@ -52,7 +52,7 @@ export const BlogPostTemplate = ({
             ) : null}
             <h3>Share via</h3>
             <div className=" social-section">
-                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(twitterLink)} onClick={() => handleLinkClick(fb)}>
+                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(fb)} onClick={() => handleLinkClick(fb)}>
                   <img
                     src={facebook}
                     alt="Facebook"
@@ -67,7 +67,7 @@ export const BlogPostTemplate = ({
 
                   />
                 </div>
-                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(twitterLink)} onClick={()=> handleLinkClick(linkedinLink)} >
+                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(linkedinLink)} onClick={()=> handleLinkClick(linkedinLink)} >
                   <img
                     src={linkedin}
                     className="icon"

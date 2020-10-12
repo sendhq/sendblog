@@ -1,93 +1,81 @@
 import React from 'react'
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import linkedin from '../img/social/linkedin.svg'
+import './css/fonts.css'
 import './custom.css'
+import './css/reset.css'
+import './css/style.css'
+import IosPlane from 'react-ionicons/lib/IosPlaneOutline'
+import IosBoatOutline from 'react-ionicons/lib/IosBoatOutline'
+import LogoFacebook from 'react-ionicons/lib/LogoFacebook'
+import LogoTwitter from 'react-ionicons/lib/LogoTwitter'
+import LogoLinkedIn from 'react-ionicons/lib/LogoLinkedin'
+import LogoInstagram from 'react-ionicons/lib/LogoInstagram'
 
 const Footer = class extends React.Component {
+  subscribeToNewsLetter = () => {
+    console.log("Here to subscribe")
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.subscribeToNewsLetter()
+  }
   render() {
     return (
-      <footer className="myFooter">
-        <div className="content container">
-        <div style={{ maxWidth: '100vw', borderBottom:'1px solid rgba(255,255,255,.2)', paddingBottom:40 }} className="columns">
-          <div className="column is-6"> 
-            <h1 style={{ color: 'white'}}>We're here to help</h1>
-          </div>
-          <div className="column is-6"> 
-            <p className="light-text">Contact our support team anytime. You can also ask us for the scores of a football match, if that's your thing.</p>
-            <div style={{marginTop:30}}>
-            <strong className="light-text">+234 909 862 0543</strong> <br />
-            <strong className="light-text">support@send.ng</strong>     
-            </div>
-                 
-          </div>
-        </div>
-        </div>
+      <div>
+        <div className="newsletter_box colr_white">
+                <h3 className="color_hite">Sign Up for News letters</h3>
+                <p className="mb3">This is where you get the scoop in your inbox!</p>
 
-        <div className="content ">
-          <div className="container  has-text-white-ter">
-           <div style={{ maxWidth: '100vw',  borderBottom:'1px solid rgba(255,255,255,.2)', }} className="columns">
-            <div className="column is-6">
-              <div className="container">
-              <img alt="Send logo" src={logo} style={{width:100}} />
-              <p className="send">SEND is a digital freight forwarder and customs broker for Africa. We manage the entire process of shipping freight by air and ocean, including customs clearance and final delivery — using software to provide instant quotes, document management, cost transparency and control across your supply chain.</p>
-              <div className="column is-4 social">
-                <a  rel="noopener noreferrer" target="_blank"  title="facebook" href="https://www.facebook.com/sendhq">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a  rel="noopener noreferrer" target="_blank"  title="twitter" href="https://twitter.com/sendDelivery">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a  rel="noopener noreferrer" target="_blank"  title="instagram" href="https://instagram.com/send.ng">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a  rel="noopener noreferrer" target="_blank"  title="linkedin" href="https://www.linkedin.com/company/send-freight">
-                  <img
-                    src={linkedin}
-                    alt="Linkedin"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-              </div>
-              </div>
+                <form onSubmit={this.handleSubmit} className="clearfix col_7 margin_center m-b">
+                   <div className="col_8 column">
+                     <input type="text" placeholder="Email Address" />
+                     </div>
+                    <div className="column col_4">
+                        <button type="submit" className="btn btn_gree" > Submit </button>
+                    </div>
+                </form>
+               
+                <IosBoatOutline color="white" className="icon" fontSize="60px" />
+                <IosPlane color="white" className="plane icon" fontSize="60px" />
             </div>
-            <div  className="column is-2"></div>
-            <div className="column is-4">
-              <div  style={{ maxWidth: '100vw' }} className="columns">
-                    <div className="column is-6">
-                      <p className="nav-section-header">Company</p>
-                      <p><a className="navbar-button"  rel="noopener noreferrer" href="https://www.send.ng/about.html" target="_blank" >About</a></p>
-                      <p> <a className="navbar-button"  rel="noopener noreferrer" href="https://blog.send.ng" >Blog</a></p>
-                      <p><a className="navbar-button"  rel="noopener noreferrer" href="https://www.send.ng/cookies.html" target="_blank" >Cookies</a></p>
-                     <p> <a className="navbar-button"  rel="noopener noreferrer" href="https://www.send.ng/privacy.html" target="_blank">Privacy Policy</a></p>
+            <footer className="color_white">
+            <div className="margin_center container clearfix main_footer">
+                <div className="col_6 column">
+                    <h4 className="color_white mb">About Us</h4>
+                    <p className="col_10">SEND is a digital freight forwarder and customs broker for Africa. We manage the entire process of shipping freight by air and ocean, including customs clearance and final delivery &mdash; using software to provide instant quotes, document management, cost transparency and control across your supply chain.</p>
+                </div>
+
+                <div className="col_6 column align_right">
+                    <div className="btns_social mb">
+                        <a rel="noopener noreferrer" target="_blank"  title="facebook" href="https://www.facebook.com/sendhq">
+                        <LogoFacebook className="social_icons" color="white" />
+                        </a>
+                        <a rel="noopener noreferrer" target="_blank"  title="facebook" href="https://twitter.com/sendDelivery">
+                        <LogoTwitter className="social_icons" color="white" />
+                        </a>
+                        <a rel="noopener noreferrer" target="_blank"  title="facebook" href="https://instagram.com/send.ng">
+                         <LogoInstagram className="social_icons" color="white" />
+                        </a>
+                        <a rel="noopener noreferrer" target="_blank"  href="https://www.linkedin.com/company/send-freight">
+                        <LogoLinkedIn className="social_icons" color="white" />
+                        </a>
                     </div>
-                    <div className="column is-6">
-                      <p className="nav-section-header">Get Started</p>
-                      <p><a className="navbar-button"   rel="noopener noreferrer" href="mailto:support@send.ng" target="_blank" >Contact</a></p>
-                      <p><a className="navbar-button"   rel="noopener noreferrer" href="https://freight.send.ng/login" target="_blank" >Business Login</a></p>
-                    </div>
-              </div>
-              </div>
-             </div>
-            <p className="copyright">&copy;{`${new Date().getFullYear()} SEND. All Rights Reserved. Copyright for all brand logos belong to respective owners.`}</p>
-          </div>
-        </div>
-      </footer>
+
+                </div>
+            </div>
+
+            <div className="bottom_footer">
+                <div className="margin_center container small">
+                    <span className="mbr">&copy; Copyright 2020 SEND. All rights reserved</span>
+                    &#8226;
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.send.ng/privacy.html">Privacy</a>
+                    &#8226;
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.send.ng/cookies.html">Cookies</a>
+                </div>
+            </div>
+        </footer>
+
+      </div>
     )
   }
 }
