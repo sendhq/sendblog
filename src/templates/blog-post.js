@@ -16,7 +16,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
-  slug
+  slug,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -25,7 +25,7 @@ export const BlogPostTemplate = ({
   const twitterLink = `https://twitter.com/share?url=${baseURL}&text=${title}&via=sendDelivery`
   const linkedinLink = `https://www.linkedin.com/shareArticle?url=${baseURL}`
   const handleLinkClick = (link) => {
-    window.open(link, "_blank")
+    window.open(link, '_blank')
   }
   return (
     <section className="section">
@@ -52,29 +52,31 @@ export const BlogPostTemplate = ({
             ) : null}
             <h3>Share via</h3>
             <div className=" social-section">
-                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(fb)} onClick={() => handleLinkClick(fb)}>
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    className="icon"
-                  />
-                </div>
-                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(twitterLink)} onClick={()=> handleLinkClick(twitterLink)}>
-                  <img
-                    className="fas fa-lg icon"
-                    src={twitter}
-                    alt="Twitter"
-
-                  />
-                </div>
-                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(linkedinLink)} onClick={()=> handleLinkClick(linkedinLink)} >
-                  <img
-                    src={linkedin}
-                    className="icon"
-                    alt="Linkedin"
-                  />
-                </div>
+              <div
+                tabIndex={0}
+                role="button"
+                onKeyPress={() => handleLinkClick(fb)}
+                onClick={() => handleLinkClick(fb)}
+              >
+                <img src={facebook} alt="Facebook" className="icon" />
               </div>
+              <div
+                tabIndex={0}
+                role="button"
+                onKeyPress={() => handleLinkClick(twitterLink)}
+                onClick={() => handleLinkClick(twitterLink)}
+              >
+                <img className="fas fa-lg icon" src={twitter} alt="Twitter" />
+              </div>
+              <div
+                tabIndex={0}
+                role="button"
+                onKeyPress={() => handleLinkClick(linkedinLink)}
+                onClick={() => handleLinkClick(linkedinLink)}
+              >
+                <img src={linkedin} className="icon" alt="Linkedin" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -88,7 +90,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  slug: PropTypes.string
+  slug: PropTypes.string,
 }
 
 const BlogPost = ({ data }) => {

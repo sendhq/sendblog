@@ -7,50 +7,41 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
     return (
-      <div className="columns is-multiline">
+      <div className="contain pt4 blog_posts">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification custom-item ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title custom-title"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span style={{ fontSize:12, marginTop:6 }} className="subtitle is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p style={{fontSize:14}}>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button more" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
+            <div className="one_post clearfix">
+              <div className="post_image column right col_4">
+                <div>
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      image: post.frontmatter.featuredimage,
+                      alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className="post_attr column col_8">
+                <p className="mb category_date">
+                  <Link to="/">Freight Updates</Link>
+                  &#8226;
+                  <span>{post.frontmatter.date}</span>
                 </p>
-              </article>
+
+                <h2 className="col_11">
+                  <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+                </h2>
+                <p className="tagline mb col_11"> {post.excerpt}</p>
+
+                <div className="author">
+                  <span>
+                    <img src="img/missing.png" alt="Elijah" />
+                  </span>
+                  <span>Elijah Shokenu</span>
+                </div>
+              </div>
             </div>
           ))}
       </div>
@@ -76,7 +67,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 200)
               id
               fields {
                 slug

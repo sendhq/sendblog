@@ -1,31 +1,30 @@
 import React from 'react'
-
+import { Link } from 'gatsby'
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
+import TopPost from '../../components/TopPost'
 
 export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div
-          className="full-width-image-container margin-top-20"
-          style={{
-            backgroundImage: `url('/img/cover.jpg')`,
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              color: 'white',
-              padding: '10px',
-              height: 'fit-content',
-              fontSize: '27px !important',
-              borderRadius:' 3px'
-            }}
-          >
-            Blog
-          </h1>
+        <div className="top back_sky clearfix">
+          <div className="contain top_content">
+            <TopPost />
+            <div className="categories_list">
+              <Link to="/" className="active">
+                All
+              </Link>
+              {/* <a href="">Partnerships</a>
+                    <a href="">Product</a>
+                    <a href="">Customs</a>
+                    <a href="">Company</a>
+                    <a href="">Engineering</a>
+                    <a href="">Others</a> */}
+            </div>
+          </div>
         </div>
+
         <section className="section">
           <div className="container">
             <div className="content">

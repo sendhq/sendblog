@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../img/blue.svg'
+import logo from './img/send.svg'
+import OpenOutline from 'react-ionicons/lib/IosOpenOutline'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -33,32 +34,26 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '80px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              tabIndex={0} 
-              role="button"
-              onKeyPress={()=> this.toggleHamburger()} 
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
+      <div className="clearfix pt back_sky">
+        <div className="column col_6 logo">
+          <Link to="/">
+            <img src={logo} alt="Send blog" />
+            <span>blog</span>
+          </Link>
         </div>
-      </nav>
+
+        <div className="column col_6 align_right pt1">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://send.ng"
+            className="weight_bold"
+          >
+            Go to SEND website{' '}
+            <OpenOutline className="outline-icon" color="#0747A6" />
+          </a>
+        </div>
+      </div>
     )
   }
 }
