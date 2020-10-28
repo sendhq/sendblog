@@ -22,8 +22,8 @@ const Footer = class extends React.Component {
   render() {
     return (
       <div>
-        <div className="newsletter_box colr_white">
-          <h3 className="color_hite">Sign Up for News letters</h3>
+        <div className="newsletter_box contain">
+          <h3 className="color_hite">Sign Up for Newsletters</h3>
           <p className="mb3">This is where you get the scoop in your inbox!</p>
 
           <form
@@ -44,6 +44,7 @@ const Footer = class extends React.Component {
           <IosBoatOutline color="white" className="icon" fontSize="60px" />
           <IosPlane color="white" className="plane icon" fontSize="60px" />
         </div>
+
         <footer className="color_white">
           <div className="margin_center container clearfix main_footer">
             <div className="col_6 column">
@@ -119,6 +120,9 @@ const Footer = class extends React.Component {
             </div>
           </div>
         </footer>
+
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
       </div>
     )
   }

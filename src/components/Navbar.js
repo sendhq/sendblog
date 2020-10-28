@@ -34,25 +34,29 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <div className="clearfix pt back_sky">
-        <div className="column col_6 logo">
-          <Link to="/">
-            <img src={logo} alt="Send blog" />
-            <span>blog</span>
-          </Link>
-        </div>
+      <div className="top back_sky clearfix">
+        <header>
+          <div className="clearfix pt back_sky">
+            <div className="column col_6 logo">
+              <Link to="/">
+                <img src={logo} alt="Send blog" />
+                <span>blog</span>
+              </Link>
+            </div>
 
-        <div className="column col_6 align_right pt1">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://send.ng"
-            className="weight_bold"
-          >
-            Go to SEND website{' '}
-            <OpenOutline className="outline-icon" color="#0747A6" />
-          </a>
-        </div>
+            <div className="column col_6 align_right pt1">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.send.ng"
+                className=""
+              >
+                Go to SEND website{' '}
+                <OpenOutline className="outline-icon" color="#0747A6" />
+              </a>
+            </div>
+          </div>
+        </header>
       </div>
     )
   }

@@ -412,7 +412,7 @@ h1.majors {
 
 h1, h2, h3, h4, h5 {
 	color: #202124;
-	font-family: "Gilroy-Regular"
+	font-family: "Gilroy-Semibold"
 }
 
 .color_green {
@@ -429,7 +429,7 @@ h1, h2, h3, h4, h5 {
 
 .contain {
 	width: 66%;
-	max-width: 1240px;
+	max-width: 1024px;
 	margin: 0px auto;
 }
 

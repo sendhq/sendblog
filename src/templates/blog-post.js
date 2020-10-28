@@ -37,7 +37,7 @@ export const BlogPostTemplate = ({
         <div className="contain post_header pt4">
           <p className="m-b category_date pt">
             <a href="" className="_bold uppercased">
-              Blog &nbsp;/&nbsp; Product Updates
+              Product Updates
             </a>
           </p>
 
@@ -55,7 +55,7 @@ export const BlogPostTemplate = ({
       </div>
 
       <div className="clearfix post_body contain">
-        <div className="column col_3 share_icons ">
+        <div className="column col_3  ">
           <div className="author mb4">
             <span>
               <img src="/img/missing.png" alt="Elijah" />
@@ -66,7 +66,7 @@ export const BlogPostTemplate = ({
           <p className="_bold small">Published On:</p>
           <p>{date}</p>
 
-          <div className="pt4">
+          <div className="pt4 share_icons">
             <div
               tabIndex={0}
               role="button"
@@ -94,7 +94,7 @@ export const BlogPostTemplate = ({
           </div>
         </div>
 
-        <div className="post_text column col_9">
+        <div className="post_text column col_9 mb4">
           <PostContent content={content} />
         </div>
       </div>
