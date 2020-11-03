@@ -1,0 +1,94 @@
+
+.myFooter {
+    padding-top: 50px;
+    background-color: #0747a6;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navbar-button {
+    color: rgba(255,255,255,.8);
+    font-size: 14px;
+    text-align: center;
+}
+
+.navbar-button:hover {
+    color: #ffffff
+}
+
+.nav-section-header {
+    font-weight: 600;
+    color: #ffffff;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.copyright {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+.send {
+    padding-top: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+.light-text {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+    cursor:pointer;
+    margin-top: 5px;
+}
+
+.more { 
+	background: #0847a6 !important;
+	color: white !important;
+	 border: none !important;
+	font-size: 11px !important;
+	width: 8rem !important;
+	height: 45px !important;
+}
+
+.more:hover { 
+	opacity: 0.8;
+}
+
+.custom-item	{
+	background-color: rgb(255 255 255 / 20%) !important
+}
+
+.custom-title {
+	font-size: 20px !important;
+    color: #0847a6 !important;
+    text-decoration: none !important;
+}
+
+.custom-title:hover {
+    opacity: 0.8;
+}
+
+.custom-subtitle {
+	font-size: 12px !important;
+    margin-top: 6px; 
+	color: #000000c7 !important;
+}
+
+.social-section {
+    display: flex !important;
+}
+
+.social-section > div {
+    margin: 5px;
+}
