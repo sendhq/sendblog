@@ -19,7 +19,7 @@ category: Engineering
 
 Before going into detail about our CI-CD process, it is essential for us to talk a little about our stack and how we build out products at SEND. 
 
-At the core of it, we are run a typical MERN stack with associated tooling. On the backend, we have Express and Mongo while on the frontend we have React. Unit tests for express are written with Mocha while the frontend runs Jest/Enzyme for unit tests and Cypress for integration tests. 
+At the core of it, we run a typical MERN stack with associated tooling. On the backend, we have Express and Mongo while on the frontend we have React. Unit tests for express are written with Mocha while the frontend runs Jest/Enzyme for unit tests and Cypress for integration tests. 
 
 Now that we know about the stack we can proceed to delve into the details of our development pipeline. 
 
