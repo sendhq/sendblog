@@ -7,7 +7,7 @@ description: "At SEND, our engineering team is a relatively small one with great
   simultaneously, we also have to do so in a manner that ensures stability
   across the different products. "
 featuredpost: true
-featuredimage: /img/ci-cd.png
+featuredimage: /img/continuous-integration-continuous-deployment-01.png
 tags:
   - Continuous Integration
 author: Richard Igbiriki
