@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
@@ -13,6 +13,7 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+    const { active } = this.state;
     return (
       <nav
         className='navbar is-transparent'
@@ -26,9 +27,9 @@ const Navbar = class extends React.Component {
             </Link>
             {/* Hamburger menu */}
             <button
-              className={`navbar-burger burger ${isActive && "is-active"}`}
-              aria-expanded={isActive}
-              onClick={() => setIsActive(!isActive)}
+              className={`navbar-burger burger ${active && "is-active"}`}
+              aria-expanded={active}
+              onClick={() => this.setState(!active)}
             >
               <span />
               <span />
@@ -38,7 +39,7 @@ const Navbar = class extends React.Component {
           <ul
             id='navMenu'
             className={` navbar-start has-text-centered navbar-menu ${
-              isActive && "is-active"
+              active && "is-active"
             }`}
           >
             {/* TODO: inline override of padding is a result of refactoring
