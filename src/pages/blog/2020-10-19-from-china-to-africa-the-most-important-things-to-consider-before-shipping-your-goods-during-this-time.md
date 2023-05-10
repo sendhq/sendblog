@@ -15,7 +15,7 @@ tags:
   - covid
   - shipping mode
   - shipping partner
-author: Elijah Shokenu
+author: Team SEND
 category: Freight Updates
 ---
 <!--StartFragment-->
