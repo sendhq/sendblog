@@ -1,5 +1,5 @@
 ---
-templateKey: Engineering
+templateKey: category-post
 title: Engineering
-description: Engineering
+description: Engineering related posts by engineers and non-engineers
 ---
