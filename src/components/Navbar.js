@@ -48,7 +48,7 @@ const Navbar = class extends React.Component {
               <a
                 rel='noopener noreferrer'
                 target='_blank'
-                href='https://www.send.ng'
+                href='https://www.trysend.com'
                 className=''
               >
                 Go to SEND website{" "}

@@ -16,6 +16,7 @@ tags:
 author: Elijah Shokenu
 category: Freight Updates
 ---
+
 ![digital freight](/img/cover.jpg)
 
 <!--StartFragment-->
@@ -52,6 +53,6 @@ From booking to delivery, digital forwarding automates shipment such that no hum
 
 \----------------------
 
-With SEND, it will be a lot easier to decide which shipping solution best fits your business. **[Learn more](send.ng)**
+With SEND, it will be a lot easier to decide which shipping solution best fits your business. **[Learn more](trysend.com)**
 
 <!--EndFragment-->
