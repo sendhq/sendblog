@@ -163,7 +163,7 @@ const Footer = class extends React.Component {
               <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://www.send.ng/privacy.html'
+                href='https://www.trysend.com/privacy.html'
               >
                 Privacy
               </a>
@@ -171,7 +171,7 @@ const Footer = class extends React.Component {
               <a
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://www.send.ng/cookies.html'
+                href='https://www.trysend.com/cookies.html'
               >
                 Cookies
               </a>
