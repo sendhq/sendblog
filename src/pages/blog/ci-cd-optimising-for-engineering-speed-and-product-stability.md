@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: "CI-CD: Optimising for Engineering Speed and Product Stability"
+title: "CI-CD: Optimising for Engineering Speed and Product Stability."
 date: 2021-05-06T17:25:35.598Z
 description: "At SEND, our engineering team is a relatively small one with great
   ambition. While we are tasked with building multiple products quickly and
