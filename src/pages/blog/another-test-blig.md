@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Another Test Blig
+title: Another Test Blog
 date: 2023-05-10T12:12:35.784Z
 description: Testing blog
 featuredpost: true
