@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
-import logo from "../img/logo.svg";
+import logo from "./img/send.svg";
+import OpenOutline from "react-ionicons/lib/IosOpenOutline";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -12,80 +12,52 @@ const Navbar = class extends React.Component {
     };
   }
 
+  toggleHamburger = () => {
+    // toggle the active boolean in the state
+    this.setState(
+      {
+        active: !this.state.active,
+      },
+      // after state has been updated,
+      () => {
+        // set the class in state for the navbar accordingly
+        this.state.active
+          ? this.setState({
+              navBarActiveClass: "is-active",
+            })
+          : this.setState({
+              navBarActiveClass: "",
+            });
+      }
+    );
+  };
+
   render() {
-    const { active } = this.state;
     return (
-      <nav
-        className='navbar is-transparent'
-        role='navigation'
-        aria-label='main-navigation'
-      >
-        <div className='container'>
-          <div className='navbar-brand'>
-            <Link to='/' className='navbar-item' title='Logo'>
-              <img src={logo} alt='Kaldi' style={{ width: "88px" }} />
-            </Link>
-            {/* Hamburger menu */}
-            <button
-              className={`navbar-burger burger ${active && "is-active"}`}
-              aria-expanded={active}
-              onClick={() => this.setState(!active)}
-            >
-              <span />
-              <span />
-              <span />
-            </button>
-          </div>
-          <ul
-            id='navMenu'
-            className={` navbar-start has-text-centered navbar-menu ${
-              active && "is-active"
-            }`}
-          >
-            {/* TODO: inline override of padding is a result of refactoring
-                to a ul for accessibilty purposes, would like to see a css
-                re-write that makes this unneccesary.
-             */}
-            <li className='navbar-item' style={{ padding: "0px" }}>
-              <Link className='navbar-item' to='/about'>
-                About
+      <div className='top back_sky clearfix'>
+        <header>
+          <div className='clearfix pt back_sky'>
+            <div className='column col_6 logo'>
+              <Link to='/'>
+                <img src={logo} alt='Send blog' />
+                <span>blog</span>
               </Link>
-            </li>
-            <li className='navbar-item' style={{ padding: "0px" }}>
-              <Link className='navbar-item' to='/products'>
-                Products
-              </Link>
-            </li>
-            <li className='navbar-item' style={{ padding: "0px" }}>
-              <Link className='navbar-item' to='/blog'>
-                Blog
-              </Link>
-            </li>
-            <li className='navbar-item' style={{ padding: "0px" }}>
-              <Link className='navbar-item' to='/contact'>
-                Contact
-              </Link>
-            </li>
-            <li className='navbar-item' style={{ padding: "0px" }}>
-              <Link className='navbar-item' to='/contact/examples'>
-                Form Examples
-              </Link>
-            </li>
-            <li className='navbar-end has-text-centered'>
+            </div>
+
+            <div className='column col_6 align_right pt1'>
               <a
-                className='navbar-item'
-                href='https://github.com/netlify-templates/gatsby-starter-netlify-cms'
-                target='_blank'
                 rel='noopener noreferrer'
+                target='_blank'
+                href='https://www.send.ng'
+                className=''
               >
-                <span className='icon'>
-                  <img src={github} alt='Github' />
-                </span>
+                Go to SEND website{" "}
+                <OpenOutline className='outline-icon' color='#0747A6' />
               </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+            </div>
+          </div>
+        </header>
+      </div>
     );
   }
 };
