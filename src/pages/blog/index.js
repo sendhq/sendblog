@@ -4,6 +4,12 @@ import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
 
 export default class BlogIndexPage extends React.Component {
+  state = {
+    filterCategory: "All",
+  };
+  updateFilterCategory = (filterCategory) => {
+    this.setState({ filterCategory });
+  };
   render() {
     return (
       <Layout>

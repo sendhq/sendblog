@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    title: "The SEND Blog",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+      "Everything you need to know about SEND, freight forwarding and cross border shipping in Africa",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -43,7 +43,7 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
+          "gatsby-remark-relative-images",
           {
             resolve: "gatsby-remark-images",
             options: {

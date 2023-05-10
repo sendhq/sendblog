@@ -14,11 +14,11 @@ class BlogRoll extends React.Component {
 
     return filteredPosts;
   };
-
   render() {
     const { data, filterCategory } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
     const filteredPosts = this.filterPosts(filterCategory, posts);
+
     return (
       <div className='contain pt4'>
         <div className='blog_posts'>
@@ -82,35 +82,33 @@ BlogRoll.propTypes = {
   }),
 };
 
-// eslint-disable-next-line
-export default (props) => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query BlogRollQuery {
-          allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-          ) {
-            edges {
-              node {
-                excerpt(pruneLength: 400)
-                id
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                  templateKey
-                  date(formatString: "MMMM DD, YYYY")
-                  featuredpost
-                  featuredimage {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 120
-                        quality: 100
-                        layout: CONSTRAINED
-                      )
+export default (props) => (
+  <StaticQuery
+    query={graphql`
+      query BlogRollQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 200)
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                templateKey
+                author
+                category
+                description
+                date(formatString: "MMMM DD, YYYY")
+                featuredpost
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 120, quality: 100) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
@@ -118,10 +116,8 @@ export default (props) => {
             }
           }
         }
-      `}
-      render={(data, count) => (
-        <BlogRoll data={data} count={count} {...props} />
-      )}
-    />
-  );
-};
+      }
+    `}
+    render={(data, count) => <BlogRoll data={data} count={count} {...props} />}
+  />
+);
