@@ -9,7 +9,7 @@ import facebook from "../img/social/facebook.svg";
 import twitter from "../img/social/twitter.svg";
 import linkedin from "../img/social/linkedin.svg";
 
-import { GatsbyImage as Img } from "gatsby-plugin-image";
+import Img from "gatsby-image";
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -134,6 +134,11 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        slug={post.fields.slug}
+        featuredImage={post.frontmatter.featuredimage}
+        date={post.frontmatter.date}
+        category={post.frontmatter.category}
+        author={post.frontmatter.author}
       />
     </Layout>
   );
