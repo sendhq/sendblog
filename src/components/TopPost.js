@@ -1,19 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql, StaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 class TopPost extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-    const post = posts && posts.length > 0 ? posts[0].node : null
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
+    const post = posts && posts.length > 0 ? posts[0].node : null;
 
     return (
       post && (
-        <div className="clearfix mb">
-          <div className="top_post one_post clearfix">
-            <div className="post_image right">
+        <div className='clearfix mb'>
+          <div className='top_post one_post clearfix'>
+            <div className='post_image right'>
               <PreviewCompatibleImage
                 imageInfo={{
                   image: post.frontmatter.featuredimage,
@@ -22,19 +22,19 @@ class TopPost extends React.Component {
               />
             </div>
 
-            <div className="post_attr column">
-              <p className="mb category_date">
-                <Link to={post.fields.slug} className="_bold uppercased">
+            <div className='post_attr column'>
+              <p className='mb category_date'>
+                <Link to={post.fields.slug} className='_bold uppercased'>
                   {post.category}
                 </Link>
               </p>
 
-              <h2 className="mb">
+              <h2 className='mb'>
                 <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
               </h2>
 
-              <p className="category_">
-                <span>{post.frontmatter.date}</span>{' '}
+              <p className='category_'>
+                <span>{post.frontmatter.date}</span>{" "}
                 &nbsp;&nbsp;&#8226;&nbsp;&nbsp;
                 <span>{post.frontmatter.author}</span>
               </p>
@@ -42,7 +42,7 @@ class TopPost extends React.Component {
           </div>
         </div>
       )
-    )
+    );
   }
 }
 
@@ -52,8 +52,9 @@ TopPost.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-}
+};
 
+// eslint-disable-next-line
 export default () => (
   <StaticQuery
     query={graphql`
@@ -90,4 +91,4 @@ export default () => (
     `}
     render={(data, count) => <TopPost data={data} count={count} />}
   />
-)
+);

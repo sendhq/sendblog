@@ -82,6 +82,7 @@ BlogRoll.propTypes = {
   }),
 };
 
+// eslint-disable-next-line
 export default (props) => (
   <StaticQuery
     query={graphql`
