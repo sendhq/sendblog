@@ -2,6 +2,8 @@ import * as React from "react";
 
 import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
+import TopPost from "../../components/TopPost";
+import CategoriesPage from "../categories";
 
 export default class BlogIndexPage extends React.Component {
   state = {
@@ -11,33 +13,20 @@ export default class BlogIndexPage extends React.Component {
     this.setState({ filterCategory });
   };
   render() {
+    const { filterCategory } = this.state;
     return (
       <Layout>
-        <div
-          className='full-width-image-container margin-top-0'
-          style={{
-            backgroundImage: `url('/img/blog-index.jpg')`,
-          }}
-        >
-          <h1
-            className='has-text-weight-bold is-size-1'
-            style={{
-              boxShadow: "0.5rem 0 0 #f40, -0.5rem 0 0 #f40",
-              backgroundColor: "#f40",
-              color: "white",
-              padding: "1rem",
-            }}
-          >
-            Latest Stories
-          </h1>
-        </div>
-        <section className='section'>
-          <div className='container'>
-            <div className='content'>
-              <BlogRoll />
-            </div>
+        <div className='top back_sky clearfix'>
+          <div className='contain top_content'>
+            <TopPost />
+            <CategoriesPage
+              filterCategory={filterCategory}
+              updateFilterCategory={this.updateFilterCategory}
+            />
           </div>
-        </section>
+        </div>
+
+        <BlogRoll filterCategory={filterCategory} />
       </Layout>
     );
   }
