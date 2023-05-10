@@ -19,6 +19,8 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
     const filteredPosts = this.filterPosts(filterCategory, posts);
 
+    console.log({ filteredPosts });
+
     return (
       <div className='contain pt4'>
         <div className='blog_posts'>

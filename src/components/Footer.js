@@ -82,7 +82,7 @@ const Footer = class extends React.Component {
                 <button
                   disabled={this.state.loading}
                   type='submit'
-                  className='btn btn_gree'
+                  className='btn btn_green'
                 >
                   {this.state.loading ? (
                     <IosSettings color='white' rotate={true} fontSize='15px' />
