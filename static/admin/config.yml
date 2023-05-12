@@ -9,7 +9,7 @@ backend:
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
 local_backend: true
-media_folder: static/img
+media_folder: blog_static/img
 public_folder: /img
 
 collections:
