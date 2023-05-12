@@ -62,7 +62,7 @@ export const BlogPostTemplate = ({
         <div className='column col_3  '>
           <div className='author mb4'>
             <span>
-              <img src='/img/missing.png' alt='Elijah' />
+              <img src='/imgs/missing.png' alt='Elijah' />
             </span>
             <span className='block_disp'>{author}</span>
           </div>

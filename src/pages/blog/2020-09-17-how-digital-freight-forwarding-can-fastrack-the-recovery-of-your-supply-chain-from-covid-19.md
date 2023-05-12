@@ -10,14 +10,14 @@ description: It’s still around but we seem to be getting over it steadily.  Th
   chains are impacted by the loss of belly cargo capacity on passenger flights
   to new regulations and border restrictions.
 featuredpost: true
-featuredimage: /img/cover.jpg
+featuredimage: /imgs/cover.jpg
 tags:
   - freight Covidrecovery supplychain
 author: Elijah Shokenu
 category: Freight Updates
 ---
 
-![digital freight](/img/cover.jpg)
+![digital freight](/imgs/cover.jpg)
 
 <!--StartFragment-->
 
@@ -41,7 +41,7 @@ Instead of time-consuming paperwork, digital forwarding now offers to collect al
 
 Through digital freight forwarding, everyone is on the same level and customers always know where their cargo is to communicate with their customers or whoever awaits the shipment.
 
-![automated-shipping](/img/automated_shipping.png "Automated Shipping")
+![automated-shipping](/imgs/automated_shipping.png "Automated Shipping")
 
 ### Automated invoicing
 
