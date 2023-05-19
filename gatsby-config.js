@@ -56,7 +56,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-copy-linked-files",
             options: {
-              destinationDir: "blog_static",
+              destinationDir: "static",
             },
           },
         ],
