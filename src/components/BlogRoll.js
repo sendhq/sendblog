@@ -57,7 +57,7 @@ class BlogRoll extends React.Component {
 
                   <div className='author'>
                     <span>
-                      <img src='img/missing.png' alt='Elijah' />
+                      <img src='imgs/missing.png' alt='Elijah' />
                     </span>
                     <span>{post.frontmatter.author}</span>
                   </div>
