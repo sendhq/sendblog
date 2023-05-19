@@ -21,6 +21,8 @@ class BlogRoll extends React.Component {
 
     console.log({ filteredPosts });
 
+    // console.log("dfsdf", __dirname);
+
     return (
       <div className='contain pt4'>
         <div className='blog_posts'>
