@@ -1,5 +1,6 @@
 const _ = require("lodash");
 const path = require("path");
+const fs = require("fs");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.createPages = ({ actions, graphql }) => {
@@ -85,5 +86,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       value,
     });
+  }
+};
+
+exports.onPreInit = () => {
+  if (fs.existsSync(path.join(__dirname, "dist"))) {
+    fs.rmSync(path.join(__dirname, "dist"), { recursive: true });
+  }
+};
+
+exports.onPostBuild = () => {
+  fs.renameSync(path.join(__dirname, "public"), path.join(__dirname, "dist"));
+  if (fs.existsSync(path.join(__dirname, "public"))) {
+    fs.rmSync(path.join(__dirname, "public"), { recursive: true });
   }
 };
