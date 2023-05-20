@@ -89,15 +89,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-exports.onPreInit = () => {
-  if (fs.existsSync(path.join(__dirname, "dist"))) {
-    fs.rmSync(path.join(__dirname, "dist"), { recursive: true });
-  }
-};
+// exports.onPreInit = () => {
+//   if (fs.existsSync(path.join(__dirname, "dist"))) {
+//     fs.rmSync(path.join(__dirname, "dist"), { recursive: true });
+//   }
+// };
 
-exports.onPostBuild = () => {
-  fs.renameSync(path.join(__dirname, "public"), path.join(__dirname, "dist"));
-  if (fs.existsSync(path.join(__dirname, "public"))) {
-    fs.rmSync(path.join(__dirname, "public"), { recursive: true });
-  }
-};
+// exports.onPostBuild = () => {
+//   fs.renameSync(path.join(__dirname, "public"), path.join(__dirname, "dist"));
+//   if (fs.existsSync(path.join(__dirname, "public"))) {
+//     fs.rmSync(path.join(__dirname, "public"), { recursive: true });
+//   }
+// };
