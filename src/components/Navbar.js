@@ -36,7 +36,14 @@ const Navbar = class extends React.Component {
     return (
       <div className='top back_sky clearfix'>
         <header>
-          <div className='clearfix pt back_sky'>
+          <div
+            className='clearfix pt back_sky'
+            style={{
+              display: "flex",
+              padding: "0rem 2rem",
+              alignItems: "center",
+            }}
+          >
             <div className='column col_6 logo'>
               <Link to='/'>
                 <img src={logo} alt='Send blog' />
