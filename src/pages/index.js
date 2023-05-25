@@ -1,3 +1,7 @@
-import Blog from "./blog";
+// import Blog from "./blog";
 
-export default Blog;
+// export default Blog;
+
+import WebsitePage from "./website";
+
+export default WebsitePage;

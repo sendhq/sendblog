@@ -3,6 +3,7 @@ import "./css/fonts.css";
 import "./custom.css";
 import "./css/reset.css";
 import "./css/style.css";
+import "./css/main.min.css";
 import IosPlane from "react-ionicons/lib/IosPlaneOutline";
 import IosBoatOutline from "react-ionicons/lib/IosBoatOutline";
 import LogoFacebook from "react-ionicons/lib/LogoFacebook";
