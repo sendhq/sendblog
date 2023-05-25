@@ -1,4 +1,5 @@
-// function initMap() {
+// const initMap = () => {
+//   const google = window.google_tag_data;
 //   var e = [
 //       { stylers: [{ hue: "#0971ce" }, { lightness: 5 }] },
 //       {
@@ -27,7 +28,7 @@
 //       document.getElementById("pickup_location")),
 //     i = { types: ["geocode"], componentRestrictions: { country: "ng" } };
 //   new google.maps.places.Autocomplete(l, i);
-// }
+// };
 // $(function () {
 //   var e = new URL(window.location.href),
 //     o = e.searchParams.get("ref_code");

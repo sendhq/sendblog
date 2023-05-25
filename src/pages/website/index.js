@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { withPrefix } from "gatsby";
 import { IonIcon } from "@ionic/react";
-import { redirect } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { isEmail } from "../../../utils/methods";
 import {
   laptopOutline,
@@ -25,6 +25,14 @@ import ChartImg from "../../components/img/chart.svg";
 // eslint-disable
 const WebsitePage = () => {
   const [email, setEmail] = useState();
+  const frontChatConfig = {
+    chatId: "6d8da59cc3a54b72d42074dd08d7fc60",
+    useDefaultLauncher: true,
+  };
+
+  useEffect(() => {
+    if (window.FrontChat) console.log("is here", window.FrontChat);
+  }, [window.FrontChat]);
 
   const handleGetStarted = (e) => {
     e.preventDefault();
@@ -53,7 +61,7 @@ const WebsitePage = () => {
   return (
     <div>
       <html lang='en'>
-        <head>
+        <Helmet>
           <meta charset='utf-8' />
           <meta http-equiv='X-UA-Compatible' content='IE=edge' />
           <meta
@@ -74,16 +82,19 @@ const WebsitePage = () => {
             src='https://www.googletagmanager.com/gtag/js?id=UA-105776726-1'
           ></script>
           <script>
-            {() => {
+            {/* rewrite this */}
+            {/* {() => {
+          
               window.dataLayer = window.dataLayer || [];
-              function gtag() {
-                window.dataLayer.push(arguments);
+              function gtag(dataLayer, args) {
+                dataLayer.push(args);
               }
               gtag("js", new Date());
 
               gtag("config", "UA-105776726-1");
-            }}
+            }} */}
           </script>
+
           <meta
             name='description'
             content='SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs processes, trucking and warehousing. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.'
@@ -191,7 +202,7 @@ const WebsitePage = () => {
             href={`img/favicon.ico`}
             // href={`${withPrefix("/")}img/favicon.ico`}
           />
-        </head>
+        </Helmet>
         <body>
           <section id='hero' class='hero whole_hero'>
             <header class='clearfix container'>
@@ -423,19 +434,173 @@ const WebsitePage = () => {
               </div>
             </div>
           </section>
-          <script src='https://chat-assets.frontapp.com/v1/chat.bundle.js'></script>
-          <script>
-            {() => {
-              window.FrontChat("init", {
-                chatId: "6d8da59cc3a54b72d42074dd08d7fc60",
-                useDefaultLauncher: true,
-              });
-            }}
-            {/* window.FrontChat("init", {
-        chatId: "6d8da59cc3a54b72d42074dd08d7fc60",
-        useDefaultLauncher: true,
-      }); */}
-          </script>
+          <Helmet>
+            <script src='https://chat-assets.frontapp.com/v1/chat.bundle.js'></script>
+            <script>{`${
+              window.FrontChat
+                ? window.FrontChat("init", frontChatConfig)
+                : null
+            }`}</script>
+            <script
+              type='text/javascript'
+              src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+            ></script>
+            <script
+              type='module'
+              src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'
+            ></script>
+            <script
+              nomodule
+              src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'
+            ></script>
+            <script type='text/javascript' src='js/script.js'></script>
+            <script type='application/ld+json'>{`
+        {
+          "@context": "http://schema.org",
+          "@id": "https://www.trysend.com#identity",
+          "@type": "Corporation",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Nigeria",
+            "addressRegion": "Lagos",
+            "postalCode": "N/A",
+            "streetAddress": "Yaba, Lagos"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "telephone": "+234 909 862 0543"
+            }
+          ],
+          "description": "SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs processes, trucking and warehousing. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.",
+          "email": "support@send.ng",
+          "founder": ":Larry Oti",
+          "foundingDate": "2017",
+          "foundingLocation": "Lagos, Nigeria",
+          "image": {
+            "@type": "ImageObject",
+            "height": "800",
+            "url": "https://www.trysend.com/img/twitter.png",
+            "width": "800"
+          },
+          "logo": {
+            "@type": "ImageObject",
+            "height": "800",
+            "url": "https://www.trysend.com/img/twitter.png",
+            "width": "800"
+          },
+          "name": "SEND",
+          "sameAs": [
+            "https://twitter.com/sendDelivery",
+            "https://www.facebook.com/sendhq/",
+            "https://www.linkedin.com/company/send-shipping/",
+            "https://www.youtube.com/channel/UCMxgRsPEBn9gZ1qLOhgvbbA/",
+            "https://www.instagram.com/sendfreight/"
+          ],
+          "telephone": "+234 909 862 0543",
+          "url": "https://www.trysend.com"
+        }
+    `}</script>
+            <script type='application/ld+json'>{`
+        {
+          "@context": "http://schema.org",
+                "@type": "Corporation",
+                description:
+                  "SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs processes, trucking and warehousing. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.",
+                image: {
+                  "@type": "ImageObject",
+                  url: "https://www.send.com/img/opengraph.png",
+                },
+                mainEntityOfPage: "https://www.trysend.com/",
+                name: "SEND | Digital Freight Forwarder & Customs Broker for Africa",
+                url: "https://www.trysend.com/",
+        }
+    `}</script>
+            <script type='application/ld+json'>{`
+        {
+          "@context": "http://schema.org",
+          "@type": "Product",
+          name: "Air Freight",
+          description:
+            "SEND offers customers the speed and flexibility that comes with air - flying your cargo whenever you want and making you are in control.",
+          url: "https://www.trysend.com/",
+          brand: {
+            "@type": "Brand",
+            name: "SEND",
+            logo: "https://www.trysend.com/img/send.svg",
+          },
+        }
+    `}</script>
+            <script type='application/ld+json'>{`
+        {
+          "@context": "http://schema.org",
+          "@type": "Product",
+          name: "Ocean Freight",
+          description:
+            "Whether FCL or LCL, we make ocean shipping easier and more transparent and reliable than you ever known.",
+          url: "https://www.trysend.com/",
+          brand: {
+            "@type": "Brand",
+            name: "SEND",
+            logo: "https://www.trysend.com/img/send.svg",
+          },
+        }
+    `}</script>
+            <script type='application/ld+json'>{`
+        {
+          "@context": "http://schema.org",
+          "@type": "Product",
+          name: "Customs Brokerage",
+          description:
+            "We help you clear your goods through customs, making sure you comply with all regulatory agencies requirements across origin and destination country.",
+          url: "https://www.trysend.com/",
+          brand: {
+            "@type": "Brand",
+            name: "SEND",
+            logo: "https://www.trysend.com/img/send.svg",
+          },
+        }
+    `}</script>
+            <script type='application/ld+json'>{`
+        {
+          "@context": "http://schema.org",
+          "@id": "#creator",
+          "@type": "Organization",
+        }
+    `}</script>
+            <script type='application/ld+json'>{`
+        {
+          "@context": "http://schema.org",
+          "@type": "BreadcrumbList",
+          description: "Breadcrumbs list",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              item: { "@id": "https://www.trysend.com/", name: "Home" },
+              position: 1,
+            },
+          ],
+          name: "Breadcrumbs",
+        }
+    `}</script>
+            <script type='application/ld+json'>{`
+        {
+          "@context": "http://schema.org",
+          "@type": "BreadcrumbList",
+          description: "Breadcrumbs list",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              item: { "@id": "https://www.trysend.com/", name: "Home" },
+              position: 1,
+            },
+          ],
+          name: "Breadcrumbs",
+        }
+    `}</script>
+          </Helmet>
+
           <section class='section_footer bk_original color_white'>
             <div class='container clearfix mb4 help_request'>
               <div class='column col_6'>
@@ -539,309 +704,7 @@ const WebsitePage = () => {
               logos belong to respective owners.
             </p>
           </section>
-          <script type='application/ld+json'>
-            {() => {
-              return {
-                "@context": "http://schema.org",
-                "@type": "Corporation",
-                description:
-                  "SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs processes, trucking and warehousing. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.",
-                image: {
-                  "@type": "ImageObject",
-                  url: "https://www.send.com/img/opengraph.png",
-                },
-                mainEntityOfPage: "https://www.trysend.com/",
-                name: "SEND | Digital Freight Forwarder & Customs Broker for Africa",
-                url: "https://www.trysend.com/",
-              };
-            }}
-            {/* {
-        "@context": "http://schema.org",
-        "@type": "Corporation",
-        "description": "SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs processes, trucking and warehousing. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.",
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://www.send.com/img/opengraph.png"
-        },
-        "mainEntityOfPage": "https://www.trysend.com/",
-        "name": "SEND | Digital Freight Forwarder & Customs Broker for Africa",
-        "url": "https://www.trysend.com/"
-      } */}
-          </script>
-          <script type='application/ld+json'>
-            {() => {
-              return {
-                "@context": "http://schema.org",
-                "@id": "https://www.trysend.com#identity",
-                "@type": "Corporation",
-                address: {
-                  "@type": "PostalAddress",
-                  addressCountry: "Nigeria",
-                  addressRegion: "Lagos",
-                  postalCode: "N/A",
-                  streetAddress: "Yaba, Lagos",
-                },
-                contactPoint: [
-                  {
-                    "@type": "ContactPoint",
-                    contactType: "customer support",
-                    telephone: "+234 909 862 0543",
-                  },
-                ],
-                description:
-                  "SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs processes, trucking and warehousing. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.",
-                email: "support@send.ng",
-                founder: ":Larry Oti",
-                foundingDate: "2017",
-                foundingLocation: "Lagos, Nigeria",
-                image: {
-                  "@type": "ImageObject",
-                  height: "800",
-                  url: "https://www.trysend.com/img/twitter.png",
-                  width: "800",
-                },
-                logo: {
-                  "@type": "ImageObject",
-                  height: "800",
-                  url: "https://www.trysend.com/img/twitter.png",
-                  width: "800",
-                },
-                name: "SEND",
-                sameAs: [
-                  "https://twitter.com/sendDelivery",
-                  "https://www.facebook.com/sendhq/",
-                  "https://www.linkedin.com/company/send-shipping/",
-                  "https://www.youtube.com/channel/UCMxgRsPEBn9gZ1qLOhgvbbA/",
-                  "https://www.instagram.com/sendfreight/",
-                ],
-                telephone: "+234 909 862 0543",
-                url: "https://www.trysend.com",
-              };
-            }}
-            {/* {
-        "@context": "http://schema.org",
-        "@id": "https://www.trysend.com#identity",
-        "@type": "Corporation",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "Nigeria",
-          "addressRegion": "Lagos",
-          "postalCode": "N/A",
-          "streetAddress": "Yaba, Lagos"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "telephone": "+234 909 862 0543"
-          }
-        ],
-        "description": "SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs processes, trucking and warehousing. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.",
-        "email": "support@send.ng",
-        "founder": ":Larry Oti",
-        "foundingDate": "2017",
-        "foundingLocation": "Lagos, Nigeria",
-        "image": {
-          "@type": "ImageObject",
-          "height": "800",
-          "url": "https://www.trysend.com/img/twitter.png",
-          "width": "800"
-        },
-        "logo": {
-          "@type": "ImageObject",
-          "height": "800",
-          "url": "https://www.trysend.com/img/twitter.png",
-          "width": "800"
-        },
-        "name": "SEND",
-        "sameAs": [
-          "https://twitter.com/sendDelivery",
-          "https://www.facebook.com/sendhq/",
-          "https://www.linkedin.com/company/send-shipping/",
-          "https://www.youtube.com/channel/UCMxgRsPEBn9gZ1qLOhgvbbA/",
-          "https://www.instagram.com/sendfreight/"
-        ],
-        "telephone": "+234 909 862 0543",
-        "url": "https://www.trysend.com"
-      } */}
-          </script>
-          <script type='application/ld+json'>
-            {() => {
-              return {
-                "@context": "http://schema.org",
-                "@type": "Product",
-                name: "Air Freight",
-                description:
-                  "SEND offers customers the speed and flexibility that comes with air - flying your cargo whenever you want and making you are in control.",
-                url: "https://www.trysend.com/",
-                brand: {
-                  "@type": "Brand",
-                  name: "SEND",
-                  logo: "https://www.trysend.com/img/send.svg",
-                },
-              };
-            }}
-            {/* {
-        "@context": "http://schema.org",
-        "@type": "Product",
-        "name": "Air Freight",
-        "description": "SEND offers customers the speed and flexibility that comes with air - flying your cargo whenever you want and making you are in control.",
-        "url": "https://www.trysend.com/",
-        "brand": {
-          "@type": "Brand",
-          "name": "SEND",
-          "logo": "https://www.trysend.com/img/send.svg"
-        }
-      } */}
-          </script>
-          <script type='application/ld+json'>
-            {() => {
-              return {
-                "@context": "http://schema.org",
-                "@type": "Product",
-                name: "Ocean Freight",
-                description:
-                  "Whether FCL or LCL, we make ocean shipping easier and more transparent and reliable than you ever known.",
-                url: "https://www.trysend.com/",
-                brand: {
-                  "@type": "Brand",
-                  name: "SEND",
-                  logo: "https://www.trysend.com/img/send.svg",
-                },
-              };
-            }}
-            {/* {
-        "@context": "http://schema.org",
-        "@type": "Product",
-        "name": "Ocean Freight",
-        "description": "Whether FCL or LCL, we make ocean shipping easier and more transparent and reliable than you ever known.",
-        "url": "https://www.trysend.com/",
-        "brand": {
-          "@type": "Brand",
-          "name": "SEND",
-          "logo": "https://www.trysend.com/img/send.svg"
-        }
-      } */}
-          </script>
-          <script type='application/ld+json'>
-            {() => {
-              return {
-                "@context": "http://schema.org",
-                "@type": "Product",
-                name: "Customs Brokerage",
-                description:
-                  "We help you clear your goods through customs, making sure you comply with all regulatory agencies requirements across origin and destination country.",
-                url: "https://www.trysend.com/",
-                brand: {
-                  "@type": "Brand",
-                  name: "SEND",
-                  logo: "https://www.trysend.com/img/send.svg",
-                },
-              };
-            }}
-            {/* {
-        "@context": "http://schema.org",
-        "@type": "Product",
-        "name": "Customs Brokerage",
-        "description": "We help you clear your goods through customs, making sure you comply with all regulatory agencies requirements across origin and destination country.",
-        "url": "https://www.trysend.com/",
-        "brand": {
-          "@type": "Brand",
-          "name": "SEND",
-          "logo": "https://www.trysend.com/img/send.svg"
-        }
-      } */}
-          </script>
-          <script type='application/ld+json'>
-            {() => {
-              return {
-                "@context": "http://schema.org",
-                "@id": "#creator",
-                "@type": "Organization",
-              };
-            }}
-            {/* {
-        "@context": "http://schema.org",
-        "@id": "#creator",
-        "@type": "Organization"
-      } */}
-          </script>
-          <script type='application/ld+json'>
-            {() => {
-              return {
-                "@context": "http://schema.org",
-                "@type": "BreadcrumbList",
-                description: "Breadcrumbs list",
-                itemListElement: [
-                  {
-                    "@type": "ListItem",
-                    item: { "@id": "https://www.trysend.com/", name: "Home" },
-                    position: 1,
-                  },
-                ],
-                name: "Breadcrumbs",
-              };
-            }}
-            {/* {
-        "@context": "http://schema.org",
-        "@type": "BreadcrumbList",
-        "description": "Breadcrumbs list",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "item": { "@id": "https://www.trysend.com/", "name": "Home" },
-            "position": 1
-          }
-        ],
-        "name": "Breadcrumbs"
-      } */}
-          </script>
-          <script
-            type='text/javascript'
-            src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
-          ></script>
-          <script
-            type='module'
-            src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'
-          ></script>
-          <script
-            nomodule
-            src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'
-          ></script>
-          <script type='text/javascript' src='js/script.js'></script>
         </body>
-        <script>
-          {() => {
-            const button = document.getElementById("get-started-btn-bottom");
-            button.addEventListener("click", () => {
-              document.documentElement.scrollTop = 10;
-              const form = document.getElementById("form");
-              if (form) {
-                const validity = form.checkValidity();
-                if (form.checkValidity()) {
-                  const submitBtn = form.getElementsByTagName("input")[1];
-                  submitBtn.click();
-                } else {
-                  form.reportValidity();
-                }
-              }
-            });
-          }}
-          {/* const button = document.getElementById("get-started-btn-bottom");
-    button.addEventListener("click", () => {
-      document.documentElement.scrollTop = 10;
-      const form = document.getElementById("form");
-      if (form) {
-        const validity = form.checkValidity();
-        if (form.checkValidity()) {
-          const submitBtn = form.getElementsByTagName("input")[1];
-          submitBtn.click();
-        } else {
-          form.reportValidity();
-        }
-      }
-    }); */}
-        </script>
       </html>
     </div>
   );
