@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import MdList from "react-ionicons/lib/MdList";
+import MissingPerson from "./img/missing.png";
 
 class BlogRoll extends React.Component {
   filterPosts = (filterCategory, posts) => {
@@ -55,7 +56,7 @@ class BlogRoll extends React.Component {
 
                   <div className='author'>
                     <span>
-                      <img src='img/missing.png' alt='Elijah' />
+                      <img src={MissingPerson} alt='Elijah' />
                     </span>
                     <span>{post.frontmatter.author}</span>
                   </div>
