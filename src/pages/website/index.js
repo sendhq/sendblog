@@ -30,10 +30,6 @@ const WebsitePage = () => {
     useDefaultLauncher: true,
   };
 
-  useEffect(() => {
-    if (window.FrontChat) console.log("is here", window.FrontChat);
-  }, [window.FrontChat]);
-
   const handleGetStarted = (e) => {
     e.preventDefault();
     const form = document.getElementById("form");
@@ -431,11 +427,11 @@ const WebsitePage = () => {
           </section>
           <Helmet>
             <script src='https://chat-assets.frontapp.com/v1/chat.bundle.js'></script>
-            <script>{`${
+            {/* <script>{`${
               window.FrontChat
                 ? window.FrontChat("init", frontChatConfig)
                 : null
-            }`}</script>
+            }`}</script> */}
             <script
               type='text/javascript'
               src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
@@ -448,7 +444,7 @@ const WebsitePage = () => {
               nomodule
               src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'
             ></script>
-            <script type='text/javascript' src='js/script.js'></script>
+            {/* <script type='text/javascript' src='js/script.js'></script> */}
             <script type='application/ld+json'>{`
         {
           "@context": "http://schema.org",
