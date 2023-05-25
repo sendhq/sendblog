@@ -190,12 +190,7 @@ const WebsitePage = () => {
             sizes='16x16'
           />
 
-          <link
-            rel='mask-icon'
-            // href={`${withPrefix("/")}img/favicon.ico`}
-            href={`img/favicon.ico`}
-            color='#ff4400'
-          />
+          <link rel='mask-icon' href={`img/favicon.ico`} color='#ff4400' />
           <link
             rel='shortcut icon'
             type='image/x-icon'
