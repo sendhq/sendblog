@@ -6,11 +6,6 @@ footer {
 	background: #0747A6;
 }
 
-header {
-	padding-left: 40px;
-	padding-right: 40px;
-}
-
 .bottom_footer .container {
 	border-top: 1px solid rgba(255,255,255,0.2);
 	padding: 25px 0;
@@ -80,6 +75,10 @@ header {
 	font-weight: 400;
 }
 
+.category_date a {
+	font-weight: 600;
+}
+
 .post_image {
 	max-width: 320px;
 }
@@ -146,6 +145,7 @@ header {
 
 .newsletter_box {
 	padding: 55px 50px 60px;
+	margin-top: 100px;
 	position: relative;
 	font-size: 18px;
 	border-radius: 8px;
@@ -203,23 +203,25 @@ p.newsletter_success {
 
 .categories_list {
 	display: flex;
+	margin-bottom: 20px;
 }
 
 .categories_list button {
 	color: #8da6bd;
-	padding: 10px 5px;
-	margin-right: 34px;
-	font-size: 15px;
+	padding: 8px 15px;
+	margin-right: 15px;
+	font-size: 14px;
 	font-weight: 400;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
 	outline: none !important;
+	border-radius: 100px;
 }
 
 .categories_list button.active {
-	color: #0747A6;
-	border-bottom: 3px solid #0747A6;
+	color: #fff;
+	background: #0747A6;
 }
 
 .logo img {
@@ -265,25 +267,33 @@ p.newsletter_success {
 	line-height: normal;
 }
 
+.top_post {
+	display: flex;
+  	flex-direction: row;
+}
+
 .top_post .post_attr {
-	padding: 50px 30px 50px 0;
+	padding-top: 40px;
     z-index: 1;
     background: #f5f7f9;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     border-radius: 8px;
-    width: 45%;
+    /*width: 45%;*/
+    /*border: 1px solid red;*/
 }
 
 .top_post .post_image {
-	max-width: 600px;
+	/*max-width: 600px;*/
 	max-width: none;
-	width: 70%;
-	margin-left: -15%;
+	/*width: 70%;*/
+	/*margin-left: -15%;*/
 	position: relative;
+	/*border: 1px solid red;*/
 }
 
 .top_post .post_image > div {
-    height: 420px;
+    height: 320px;
+    border: 1px solid #f5f7f9;
 }
 
 .post_header h1 a {
@@ -301,9 +311,9 @@ p.newsletter_success {
 .post_header .post_image {
 	width: 100%;
 	max-width: 100%;
-	height: 450px;
+	height: 440px;
 	overflow: hidden;
-	margin-bottom: -50px;
+	margin-bottom: -100px;
 	border-radius: 8px;
 }
 
@@ -314,7 +324,7 @@ p.newsletter_success {
 .post_body {
 	position: relative;
 	z-index: 1;
-	padding-top: 100px;
+	padding-top: 150px;
 }
 
 .share_icons div {
@@ -323,6 +333,8 @@ p.newsletter_success {
 	/*color: #BEBEBE;*/
 	margin-bottom: 20px;
 	opacity: 0.5;
+	width: 25px;
+	cursor: pointer;
 }
 
 .post_text {
@@ -332,6 +344,7 @@ p.newsletter_success {
 
 .post_text p {
 	margin-bottom: 30px;
+	font-size: 16px;
 }
 
 .post_text h3 strong, .post_text h3 {
@@ -516,8 +529,8 @@ p.newsletter_success {
 	}
 
 	header {
-	    padding-left: 30px;
-	    padding-right: 30px;
+	    /*padding-left: 30px;
+	    padding-right: 30px;*/
 	}
 
 	.post_body {

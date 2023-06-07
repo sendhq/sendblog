@@ -14,13 +14,20 @@ import {
   logoInstagram,
   logoLinkedin,
 } from "ionicons/icons";
-import "../../components/css/main.min.css";
+
+
+import "../../components/css/fonts.css";
+import "../../components/css/reset.css";
+import "../../components/css/style.css";
+import "../../components/css/main.css";
+
 
 import ShipmentsImg from "../../components/img/shipments.png";
 import VanOutlineImg from "../../components/img/van_outline.svg";
 import VesselsImg from "../../components/img/vessel.svg";
 import TruckImg from "../../components/img/truck.svg";
 import ChartImg from "../../components/img/chart.svg";
+import missingImg from "../../components/img/person.png";
 
 // eslint-disable
 const WebsitePage = () => {
@@ -193,9 +200,15 @@ const WebsitePage = () => {
             href={`img/favicon.ico`}
             // href={`${withPrefix("/")}img/favicon.ico`}
           />
+
+          <link
+            href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap'
+            rel='stylesheet'
+          />
         </Helmet>
         <body>
-          <section id='hero' class='hero whole_hero'>
+
+          <section id='hero' class='hero'>
             <header class='clearfix container'>
               <div class='mobile_nav_wrap'>
                 <a href='#' class='mobile_nav navbar_cllapse mobile_show'>
@@ -214,8 +227,8 @@ const WebsitePage = () => {
                   </p>
                 </div>
                 <ul class='nav left'>
-                  <a href='/#overview' class='_anchor'>
-                    Overview
+                  <a href='/#platform' class='_anchor'>
+                    Platform
                   </a>
                   <a href='/#services' class='_anchor'>
                     Our Services
@@ -243,168 +256,183 @@ const WebsitePage = () => {
                     class='btn'
                     style={{ display: "initial" }}
                   >
-                    Get Started
+                    Book a Demo
                   </a>
                 </ul>
               </nav>
             </header>
-            <div class='hero_content'>
-              <div class='top container'>
-                <h1 class='m-b uppercased'>
-                  Move Cargo easily.
-                  <br />
-                  Air. Ocean. Customs.
-                  <br />
-                  For Africa.
+
+            <div class='hero_content conainer clearfix'>
+
+              <div class='top col_8'>
+                <h1 class='m-b col_10'>
+                  Digital freight forwarder and supply chain operating system.
                 </h1>
-                <h4 class='col_7 mb3'>
+
+                <h4 class='col_10 mb4'>
                   We manage the entire process of shipping cargo via Air and
                   Ocean, from suppliers around the world to your destination
                   &mdash; including customs clearance, trucking and warehousing.
                 </h4>
-                <div class='col_5 hero_form' id='hero-form'>
-                  <form
-                    // action='https://app.trysend.com/register'
-                    // method='GET'
-                    onSubmit={handleGetStarted}
-                    id='form'
-                  >
-                    <div class='column col_8'>
-                      <input
-                        type='text'
-                        id='email'
-                        placeholder='Enter business email'
-                        name='email'
-                        required
-                        style={{ fontSize: "100%", borderRadius: 0 }}
-                      />
-                    </div>
-                    <div class='column col_4'>
-                      <input
-                        type='submit'
-                        class='btn'
-                        value='Get Started &nbsp; &rarr;'
-                      />
-                    </div>
-                  </form>
+
+                <a id='get-started-btn'
+                    href='https://app.trysend.com/register'
+                    target='_blank'
+                    class='btn'
+                    style={{ display: "initial" }} >
+                    Book a Demo
+                  </a>
+              </div>
+
+              <div class='_inner'>
+
+                <div class="dummy_notif one">
+                  <div class="avatr"><img src={missingImg} /></div>
+                  <div class="dummy_notif_details">
+                    <span>SH-123456</span>
+                    <p></p>
+                  </div>
                 </div>
+
+                <div class="dummy_notif two">
+                  <div class="avatr"><img src={missingImg} /></div>
+                  <div class="dummy_notif_details">
+                    <span>SH-123456</span>
+                    <p></p>
+                  </div>
+                </div>
+
               </div>
             </div>
-            <div class='_inner ___cut'></div>
-            <div class='_inner __cut'></div>
+
           </section>
-          <section class='how_works feature' id='overview'>
-            <div class='align_center mb4 pt4 col_7 margin_center'>
+
+
+          <section class='how_works feature' id='platform'>
+            <div class='align_center mb4 pt4 col_6 margin_center'>
               <span class='color_initial m-b weight_bolder block_disp uppercased'>
                 What we do
               </span>
               <h1 class='m-b'>One Platform for African Trade</h1>
               <p class='bigger_p'>
-                Get visibility and control of your supply chain with instant
-                quotes, simple bookings, predictable costs, reports, and real
-                time tracking as your cargo moves via air, ocean or land.
+                Get visibility and control of your supply chain with simple bookings, 3PL management, predictable costs, reports, and real time tracking as your cargo moves via air, ocean or land.
               </p>
             </div>
+            <br/>
+
             <div class='product_view'>
               <img src={ShipmentsImg} alt='Shipments Dashboard' />
             </div>
+
             <div class='bk_gray benefits'>
               <div class='container'>
                 <ol class='clearfix'>
+
                   <li class='column col_4'>
+                    
                     <div class='feature_icon request whole_icon'>
                       <img src={VanOutlineImg} />
                     </div>
-                    <h3 class='m-b'>Instant Quotes</h3>
+                    <h2 class='m-b'>Booking &amp; Collaboration</h2>
                     <p>
-                      Get instant quotes. Know your entire cost upfront in
-                      detail. No more waiting days for quotes with hidden fees.
+                      Making bookings from your computer. Invite your network, including suppliers and buyers. Manage shipping documents..
                     </p>
                   </li>
-                  <li class='column col_4'>
-                    <div
-                      class='feature_icon track whole_icon whole_icon_icon'
-                      style={{ marginTop: "-17px", marginBottom: "13px" }}
-                    >
-                      <IonIcon icon={laptopOutline} />
-                      {/* <ion-icon name='laptop-outline'></ion-icon> */}
-                    </div>
-                    <h3 class='m-b'>Simple Booking &amp; Payments</h3>
-                    <p>
-                      Book from your computer. Invite your supplier to input
-                      data. Upload shipping documents and manage payments.
-                    </p>
-                  </li>
+
                   <li class='column col_4'>
                     <div class='feature_icon rate whole_icon'>
                       <img src={ChartImg} />
                     </div>
-                    <h3 class='m-b'>Track &amp; Manage</h3>
+                    <h2 class='m-b'>Tracking &amp; Visibility</h2>
                     <p>
                       Know where your cargo is in real time. Get full visibility
                       and control of your supply chain and receive
                       notifications.
                     </p>
                   </li>
+
+                  <li class='column col_4'>
+                    <div
+                      class='feature_icon track whole_icon whole_icon_icon'
+                      style={{ marginTop: "-17px", marginBottom: "8px" }} >
+
+                      <IonIcon icon={laptopOutline} />
+                      {/* <ion-icon name='laptop-outline'></ion-icon> */}
+                    </div>
+                    <h2 class='m-b'>Integrations</h2>
+                    <p>
+                      Sync data with your internal systems, TMS or ERPs like SAP, Salesforce, and Quickbooks. No need to do double entry,
+                    </p>
+                  </li>
+
                 </ol>
               </div>
             </div>
           </section>
+
           <section class='feature services' id='services'>
             <div class='container'>
-              <h1 class='mb col_6'>Our Services</h1>
-              <p class='bigger_p mb4 col_7'>
-                Move your cargo across multiple modes from origin to
-                destination. SEND handles all including regulatory requirements
-                and documentation.
-              </p>
-              <div class='clearfix pt4'>
-                <div class='column col_6 _service bk_purple _air_freight mb4'>
-                  <h2 class='mb'>Air Freight</h2>
-                  <p>
-                    We move time critical shipments across a wide range of
-                    countries - in and out of Africa. Our consolidator
-                    relationships ensure your cargo never gets delayed.
-                  </p>
-                  <IonIcon icon={airplaneOutline} />
-                  {/* <ion-icon name='airplane-outline'></ion-icon> */}
-                </div>
-                <div class='column col_6 _service bk_purple _ocean_freight mb4'>
-                  <h2 class='mb'>Ocean Freight</h2>
-                  <p class='col_10'>
-                    Whether LCL or FCL, we've got you. From origin to
-                    destination and even trucking - We bring it to you door.
-                  </p>
-                  <div class='_service_icon'>
-                    <img src={VesselsImg} />
-                  </div>
-                </div>
+              
+              <div class="col_5">
+                <h1 class='mb'>Our Services</h1>
+                <p class='bigger_p mb4 col_10'>
+                  Move your cargo across multiple modes from origin to
+                  destination. SEND handles all including regulatory requirements
+                  and documentation.
+                </p>
               </div>
-              <div class='clearfix'>
-                <div class='column col_6 _service __truck bk_purple mb4'>
-                  <h2 class='mb'>Inland Transport</h2>
-                  <p>
-                    With our trucking and barging partners, our pre-negotiated
-                    longterm deals put us in a unique position to move your
-                    cargo safely and swiftly.
-                  </p>
-                  <div class='_service_icon'>
-                    <img src={TruckImg} />
+
+              <div class="col_7">
+                <div class='clearfix _service_wrap'>
+                  <div class='col_6 _service bk_purple _air_freight mb'>
+                    <h2 class='mb'>Air Freight</h2>
+                    <p>
+                      We move time critical shipments across a wide range of
+                      countries - in and out of Africa. Our consolidator
+                      relationships ensure your cargo never gets delayed.
+                    </p>
+                    <IonIcon icon={airplaneOutline} />
+                    {/* <ion-icon name='airplane-outline'></ion-icon> */}
+                  </div>
+                  <div class='col_6 _service bk_purple _ocean_freight mb'>
+                    <h2 class='mb'>Ocean Freight</h2>
+                    <p class='col_10'>
+                      Whether LCL or FCL, we've got you. From origin to
+                      destination and even trucking - We bring it to you door.
+                    </p>
+                    <div class='_service_icon'>
+                      <img src={VesselsImg} />
+                    </div>
                   </div>
                 </div>
-                <div class='column col_6 _service bk_purple mb4'>
-                  <h2 class='mb'>Customs Clearance</h2>
-                  <p class='col_10'>
-                    We digitize the customs processes across Africa and combine
-                    professionals to help you comply with all relevant
-                    regulations.
-                  </p>
-                  <IonIcon icon={shieldOutline} />
-                  {/* <ion-icon name='shield-outline'></ion-icon> */}
+
+                <div class='clearfix _service_wrap'>
+                  <div class='col_6 _service __truck bk_purple mb4'>
+                    <h2 class='mb'>Inland Transport</h2>
+                    <p>
+                      With our trucking and barging partners, our pre-negotiated
+                      longterm deals put us in a unique position to move your
+                      cargo safely and swiftly.
+                    </p>
+                    <div class='_service_icon'>
+                      <img src={TruckImg} />
+                    </div>
+                  </div>
+                  <div class='col_6 _service bk_purple mb4'>
+                    <h2 class='mb'>Customs Clearance</h2>
+                    <p class='col_10'>
+                      We digitize the customs processes across Africa and combine
+                      professionals to help you comply with all relevant
+                      regulations.
+                    </p>
+                    <IonIcon icon={shieldOutline} />
+                    {/* <ion-icon name='shield-outline'></ion-icon> */}
+                  </div>
                 </div>
               </div>
             </div>
           </section>
+
           <section class='get_started_section clearfix'>
             <div class='container'>
               <div class='col_8 column mb3'>
@@ -420,18 +448,14 @@ const WebsitePage = () => {
                   class='btn get_started_ right'
                   onClick={() => (document.documentElement.scrollTop = 10)}
                 >
-                  Get Started
+                  Book a Demo
                 </a>
               </div>
             </div>
           </section>
+
           <Helmet>
-            <script src='https://chat-assets.frontapp.com/v1/chat.bundle.js'></script>
-            {/* <script>{`${
-              window.FrontChat
-                ? window.FrontChat("init", frontChatConfig)
-                : null
-            }`}</script> */}
+      
             <script
               type='text/javascript'
               src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
@@ -465,9 +489,9 @@ const WebsitePage = () => {
             }
           ],
           "description": "SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs processes, trucking and warehousing. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.",
-          "email": "support@send.ng",
+          "email": "care@send.ng",
           "founder": ":Larry Oti",
-          "foundingDate": "2017",
+          "foundingDate": "2018",
           "foundingLocation": "Lagos, Nigeria",
           "image": {
             "@type": "ImageObject",
@@ -595,7 +619,7 @@ const WebsitePage = () => {
           <section class='section_footer bk_original color_white'>
             <div class='container clearfix mb4 help_request'>
               <div class='column col_6'>
-                <h1 class='color_white major _bold'>We're here to help</h1>
+                <h1 class='color_white major'>We are here to help.</h1>
               </div>
               <div class='column col_6 mb4'>
                 <p class='mb'>Contact our support team anytime.</p>
@@ -605,8 +629,8 @@ const WebsitePage = () => {
                   </a>
                 </p>
                 <p class='weight_bolder ion-chevron-right'>
-                  <a class='color_white' href='mailto:support@send.ng'>
-                    support@send.ng
+                  <a class='color_white' href='mailto:care@send.ng'>
+                    care@send.ng
                   </a>
                 </p>
               </div>
@@ -620,7 +644,7 @@ const WebsitePage = () => {
                   SEND is a digital freight forwarder and customs broker for
                   Africa. We manage the entire process of shipping freight by
                   air and ocean, including customs clearance and final delivery
-                  &mdash; using software to provide instant quotes, document
+                  &mdash; using software to provide quotes, document
                   management, cost transparency and control across your supply
                   chain.
                 </p>
@@ -634,7 +658,7 @@ const WebsitePage = () => {
                     {/* <ion-icon name='logo-facebook'></ion-icon> */}
                   </a>
                   <a
-                    href='https://www.twitter.com/sendDelivery'
+                    href='https://www.twitter.com/sendfreight'
                     class=''
                     target='_blank'
                   >
@@ -661,25 +685,26 @@ const WebsitePage = () => {
               </div>
               <div class='column col_2 _links'>
                 <h3 class=''>Company</h3>
-                <a href='about.html' target='_blank'>
+                <a href='about' target=''>
                   About
                 </a>
-                <a href='https://blog.trysend.com' target='_blank'>
+                <a href='blog' target='_blank'>
                   Blog
                 </a>
-                <a href='cookies.html' class='' target='_blank'>
+                <a href='cookies' class='' target=''>
                   Cookies
                 </a>
-                <a href='privacy.html' target='_blank'>
+                <a href='privacy' target=''>
                   Privacy Policy
                 </a>
-                <a href='terms.html' class=''>
-                  Terms and Conditions{" "}
+                <a href='terms' class=''>
+                  Terms of Service{" "}
                 </a>
               </div>
+
               <div class='column col_2 _links'>
-                <h3 class=''>Get Started</h3>
-                <a href='mailto:support@send.ng' class=''>
+                <h3 class=''>Book a Demo</h3>
+                <a href='mailto:care@send.ng' class=''>
                   Contact
                 </a>
                 <a href='https://help.trysend.com/' target='_blank' class=''>
@@ -690,8 +715,9 @@ const WebsitePage = () => {
                 </a>
               </div>
             </div>
+
             <p class='aligncenter copy container'>
-              &copy; 2020 SEND. All Rights Reserved. Copyright for all brand
+              &copy; 2023 SEND. All Rights Reserved. Copyright for all brand
               logos belong to respective owners.
             </p>
           </section>
