@@ -139,6 +139,11 @@ export const HeaderLink = () => {
           href={`img/favicon.ico`}
           // href={`${withPrefix("/")}img/favicon.ico`}
         />
+
+        <link
+          href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap'
+          rel='stylesheet'
+        />
       </Helmet>
     </>
   );
@@ -148,13 +153,13 @@ export const Header = () => {
   return (
     <header class='clearfix container'>
       <div class='mobile_nav_wrap'>
-        <a href='/' class='mobile_nav navbar_cllapse mobile_show'>
+        <a href='#' class='mobile_nav navbar_cllapse mobile_show'>
           <IonIcon icon={menuSharp} />
           {/* <ion-icon name='menu-sharp'></ion-icon> */}
         </a>
       </div>
       <div class='clearfix mb index_logo column col_2'>
-        <a class='send-logotype logo' href='/'></a>
+        <a class='send-logotype logo' href='/#'></a>
       </div>
       <nav class='navbar navbar_colapse clearfix column col_10'>
         <div class='align_right mobile_show'>
@@ -164,8 +169,8 @@ export const Header = () => {
           </p>
         </div>
         <ul class='nav left'>
-          <a href='/#overview' class='_anchor'>
-            Overview
+          <a href='/#platform' class='_anchor'>
+            Platform
           </a>
           <a href='/#services' class='_anchor'>
             Our Services
@@ -193,7 +198,7 @@ export const Header = () => {
             class='btn'
             style={{ display: "initial" }}
           >
-            Get Started
+            Book a Demo
           </a>
         </ul>
       </nav>

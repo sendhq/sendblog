@@ -45,7 +45,7 @@ const Navbar = class extends React.Component {
             }}
           >
             <div className='column col_6 logo'>
-              <Link to='/'>
+              <Link to='/blog'>
                 <img src={logo} alt='Send blog' />
                 <span>blog</span>
               </Link>

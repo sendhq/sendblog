@@ -18,12 +18,12 @@ export const Footer = () => {
           window.FrontChat ? window.FrontChat("init", frontChatConfig) : null
         }`}</script> */}
 
-        <script>
+        {/* <script>
           {window.FrontChat("init", {
             chatId: "6d8da59cc3a54b72d42074dd08d7fc60",
             useDefaultLauncher: true,
           })}
-        </script>
+        </script> */}
         <script
           type='text/javascript'
           src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'

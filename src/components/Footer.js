@@ -1,9 +1,6 @@
 import React from "react";
-import "./css/fonts.css";
-import "./custom.css";
-import "./css/reset.css";
-import "./css/style.css";
-import "./css/main.min.css";
+
+
 import IosPlane from "react-ionicons/lib/IosPlaneOutline";
 import IosBoatOutline from "react-ionicons/lib/IosBoatOutline";
 import LogoFacebook from "react-ionicons/lib/LogoFacebook";
@@ -63,7 +60,7 @@ const Footer = class extends React.Component {
       <div>
         <div className='newsletter_box contain'>
           <h3 className='color_hite'>Sign Up for Newsletters</h3>
-          <p className='mb3'>This is where you get the scoop in your inbox!</p>
+          <p className='mb3 bigger_p'>This is where you get the scoop in your inbox!</p>
 
           <form
             onSubmit={this.handleSubmit}
@@ -132,7 +129,7 @@ const Footer = class extends React.Component {
                   rel='noopener noreferrer'
                   target='_blank'
                   title='facebook'
-                  href='https://twitter.com/sendDelivery'
+                  href='https://twitter.com/sendfreight'
                 >
                   <LogoTwitter className='social_icons' color='white' />
                 </a>
