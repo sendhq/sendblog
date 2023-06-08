@@ -228,6 +228,7 @@ p.newsletter_success {
 .logo img {
   display: inline;
   height: 32px;
+  width: auto;
 }
 
 .logo a {

@@ -230,7 +230,7 @@ export const Footer = () => {
                 {/* <ion-icon name='logo-facebook'></ion-icon> */}
               </a>
               <a
-                href='https://www.twitter.com/sendDelivery'
+                href='https://www.twitter.com/sendfreight'
                 class=''
                 target='_blank'
               >

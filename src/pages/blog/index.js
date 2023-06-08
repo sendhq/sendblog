@@ -16,7 +16,7 @@ export default class BlogIndexPage extends React.Component {
     const { filterCategory } = this.state;
     return (
       <Layout>
-        <div className='top back_sky clearfix'>
+        <div className='back_sky clearfix'>
           <div className='contain top_content'>
             <TopPost />
             <CategoriesPage

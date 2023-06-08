@@ -26,7 +26,7 @@ header {
 }
 
 .navbar a.btn.login_btn {
-  background: #f7f7f9;
+  background: #efefef;
   color: #0747a6;
   /*border-color: #f7f7f9;*/
   /*border-color: #ddd;*/
@@ -43,15 +43,11 @@ header {
   padding: 0;
 }
 
-.index_logo {
-  /*margin-right: 40px;*/
-  /*position: absolute;*/
-}
-
 .index_logo .logo {
   line-height: 1;
   display: block;
   font-size: 80px;
+  margin-top: 5px;
 }
 
 .index_logo .logo:before {
@@ -96,6 +92,12 @@ nav.navbar ul {
   margin-top: 25px;
 }
 
+.not_found_page {
+  margin: 100px auto 0;
+  height: 500px;
+  background: url(../img/ship.svg) no-repeat right bottom;
+}
+
 .top_section {
   background: #0ac97e;
   padding: 12px;
@@ -123,12 +125,113 @@ nav.navbar ul {
   display: inline;
 }
 
+.hero {
+  max-height: 728px;
+  /*overflow: hidden; */
+  position: relative;
+}
+
+.hero_invite {
+  height: 100%;
+  background-size: contain;
+}
+
+.hero_invite .hero_content {
+  height: 100%;
+  padding: 0;
+
+  background: -webkit-linear-gradient(
+    105deg,
+    #fff 47%,
+    rgba(0, 0, 0, 0.15) 47%
+  );
+  background: -moz-linear-gradient(105deg, #fff 47%, rgba(0, 0, 0, 0.15) 47%);
+  background: -o-linear-gradient(105deg, #fff 47%, rgba(0, 0, 0, 0.15) 47%);
+  background: -ms-linear-gradient(105deg, #fff 47%, rgba(0, 0, 0, 0.15) 47%);
+  background: linear-gradient(105deg, #fff 47%, rgba(0, 0, 0, 0.15) 47%);
+}
+/*
+.referral_form input[type="email"],
+.referral_form input[type="text"],
+.referral_form input[type="password"] {
+  height: 43px;
+  margin-bottom: 15px;
+  border-color: #e8e8e8;
+}
+
+.referral_form input[type="email"]:focus,
+.referral_form input[type="text"]:focus,
+.referral_form input[type="email"]:hover,
+.referral_form input[type="text"]:hover,
+.referral_form input[type="password"]:focus,
+.referral_form input[type="password"]:hover {
+  box-shadow: 0 0 0;
+}
+
+.referral_form .col_6,
+.referral_form .col_12 {
+  padding-right: 0;
+}
+
+.referral_form .btn {
+  padding: 11px 12px 10px;
+  display: block;
+  width: 100%;
+}*/
+
+.hero_invite .hero_content h1 {
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+.hero_invite h2 {
+  font-size: 22px;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.hero_content {
+  /*position: relative;*/
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  /*border: 1px solid;*/
+}
+
+.hero_content > .container, .hero_content.container {
+  /*border: 1px solid red;*/
+}
+
+.top {
+  
+  border-radius: 10px;
+  /*margin-right: 20px;*/
+  /*padding-left: 90px;*/
+}
+
+.hero_content:before {
+  content: "";
+  height: 450px;
+  /*border: 1px solid;*/
+
+
+  border-radius: 10px;
+  background: #f5f7f9;
+  width: 58%;
+  position: absolute;
+  left: 10px;
+  z-index: -1;
+}
+
 ._inner {
   position: relative;
+  right: 0;
   border-radius: 10px;
 
   height: 450px;
-  width: 38%;
+  width: 52%;
+  margin-right: -10%;
 
   background: url(../img/trade.webp) no-repeat left top;
   background-size: cover;
@@ -147,6 +250,14 @@ nav.navbar ul {
   border-radius: 4px;
 }
 
+@keyframes driving {
+  0% { left: 0%; }
+  25% { left: 4px; }
+  50% { left: 3px; }
+  100% { left: 1px; }
+
+}
+
 .dummy_notif.one {
   top: 50px;
   left: -40px;
@@ -155,6 +266,9 @@ nav.navbar ul {
 .dummy_notif.two {
   top: 300px;
   left: -100px;
+/*  -moz-animation: driving 1s infinite linear;
+  -webkit-animation: driving 1s infinite linear;
+  animation: driving 1s infinite linear;*/
 }
 
 .avatr {
@@ -201,85 +315,6 @@ nav.navbar ul {
   color: red;
 }
 
-.hero {
-  max-height: 728px;
-  /*overflow: hidden; */
-  position: relative;
-}
-
-.hero_invite {
-  height: 100%;
-  background-size: contain;
-}
-
-.hero_invite .hero_content {
-  height: 100%;
-  padding: 0;
-
-  background: -webkit-linear-gradient(
-    105deg,
-    #fff 47%,
-    rgba(0, 0, 0, 0.15) 47%
-  );
-  background: -moz-linear-gradient(105deg, #fff 47%, rgba(0, 0, 0, 0.15) 47%);
-  background: -o-linear-gradient(105deg, #fff 47%, rgba(0, 0, 0, 0.15) 47%);
-  background: -ms-linear-gradient(105deg, #fff 47%, rgba(0, 0, 0, 0.15) 47%);
-  background: linear-gradient(105deg, #fff 47%, rgba(0, 0, 0, 0.15) 47%);
-}
-
-.referral_form input[type="email"],
-.referral_form input[type="text"],
-.referral_form input[type="password"] {
-  height: 43px;
-  margin-bottom: 15px;
-  border-color: #e8e8e8;
-}
-
-.referral_form input[type="email"]:focus,
-.referral_form input[type="text"]:focus,
-.referral_form input[type="email"]:hover,
-.referral_form input[type="text"]:hover,
-.referral_form input[type="password"]:focus,
-.referral_form input[type="password"]:hover {
-  box-shadow: 0 0 0;
-}
-
-.referral_form .col_6,
-.referral_form .col_12 {
-  padding-right: 0;
-}
-
-.referral_form .btn {
-  padding: 11px 12px 10px;
-  display: block;
-  width: 100%;
-}
-
-.hero_invite .hero_content h1 {
-  font-size: 30px;
-  margin-top: 40px;
-}
-
-.hero_invite h2 {
-  font-size: 22px;
-  opacity: 0.7;
-  margin-bottom: 40px;
-}
-
-.hero_content {
-  /*position: relative;*/
-  padding: 0 10px;
-  display: flex;
-  flex-direction: row;
-}
-
-.top {
-  background: #f5f7f9;
-  border-radius: 10px;
-  margin-right: 20px;
-  padding-left: 90px;
-}
-
 .feature.services > .container,
 ._service_wrap {
   display: flex;
@@ -301,14 +336,6 @@ nav.navbar ul {
   animation: driving 25s infinite linear;
 }
 
-@keyframes driving {
-  0% {
-    left: -25%;
-  }
-  100% {
-    left: 150%;
-  }
-}
 
 h2 {
   font-size: 25px;
@@ -1638,6 +1665,15 @@ input[type="text"]:focus {
   cursor: pointer;
 }
 
+@media (min-width: 1799px) { 
+
+  ._inner {
+    width: 65%;
+    margin-right: -30%;
+  }
+
+}
+
 @media (min-width: 770px) and (max-width: 1024px) {
   .hero {
     height: auto;
@@ -2136,6 +2172,12 @@ input[type="text"]:focus {
   .feature.services > .container,
   ._service_wrap {
     flex-direction: column !important;
+    margin-top: 0;
+  }
+
+  .top {
+    margin-right: 0px;
+    padding: 20px 10px 40px;
   }
 
   .services ._service {

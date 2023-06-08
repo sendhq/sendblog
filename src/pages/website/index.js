@@ -213,9 +213,11 @@ const WebsitePage = () => {
                   {/* <ion-icon name='menu-sharp'></ion-icon> */}
                 </a>
               </div>
-              <div class='clearfix mb index_logo column col_2'>
+
+              <div class='clearfix index_logo column col_2'>
                 <a class='send-logotype logo' href='/#'></a>
               </div>
+              
               <nav class='navbar navbar_colapse clearfix column col_10'>
                 <div class='align_right mobile_show'>
                   <p class='color_white close_close_btn'>
@@ -236,6 +238,9 @@ const WebsitePage = () => {
                     target='_blank'
                   >
                     Get a Quote
+                  </a>
+                  <a href='blog' target='_blank'>
+                    Our Blog
                   </a>
                 </ul>
                 <ul class='clearfix right'>
@@ -259,28 +264,29 @@ const WebsitePage = () => {
               </nav>
             </header>
 
-            <div class='hero_content conainer clearfix'>
-              <div class='top col_8'>
-                <h1 class='m-b col_10'>
-                  Digital freight forwarder and supply chain operating system.
-                </h1>
+            <div class='hero_content container clearfix'>
 
-                <h4 class='col_10 mb4'>
-                  We manage the entire process of shipping cargo via Air and
-                  Ocean, from suppliers around the world to your destination
-                  &mdash; including customs clearance, trucking and warehousing.
-                </h4>
+                <div class='top col_8'>
+                  <h1 class='m-b col_10'>
+                    Digital freight forwarder and supply chain operating system.
+                  </h1>
 
-                <a
-                  id='get-started-btn'
-                  href='https://app.trysend.com/register'
-                  target='_blank'
-                  class='btn'
-                  style={{ display: "initial" }}
-                >
-                  Book a Demo
-                </a>
-              </div>
+                  <h4 class='col_10 mb4'>
+                    We manage the entire process of shipping cargo via Air and
+                    Ocean, from suppliers around the world to your destination
+                    &mdash; including customs clearance, trucking and warehousing.
+                  </h4>
+
+                  <a
+                    id='get-started-btn'
+                    href='https://app.trysend.com/register'
+                    target='_blank'
+                    class='btn'
+                    style={{ display: "initial" }}
+                  >
+                    Book a Demo
+                  </a>
+                </div>
 
               <div class='_inner'>
                 <div class='dummy_notif one'>
@@ -303,7 +309,11 @@ const WebsitePage = () => {
                   </div>
                 </div>
               </div>
+              
             </div>
+
+
+
           </section>
 
           <section class='how_works feature' id='platform'>
