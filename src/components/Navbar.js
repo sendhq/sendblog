@@ -56,8 +56,7 @@ const Navbar = class extends React.Component {
                 rel='noopener noreferrer'
                 target='_blank'
                 href='https://www.trysend.com'
-                className=''
-              >
+                className='' >
                 Go to SEND website{" "}
                 <OpenOutline className='outline-icon' color='#0747A6' />
               </a>

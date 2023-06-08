@@ -230,8 +230,8 @@ nav.navbar ul {
   border-radius: 10px;
 
   height: 450px;
-  width: 52%;
-  margin-right: -10%;
+  width: 50%;
+  margin-right: -8%;
 
   background: url(../img/trade.webp) no-repeat left top;
   background-size: cover;
@@ -1669,7 +1669,7 @@ input[type="text"]:focus {
 
   ._inner {
     width: 65%;
-    margin-right: -30%;
+    margin-right: -28%;
   }
 
 }
@@ -1679,6 +1679,7 @@ input[type="text"]:focus {
     height: auto;
     max-height: none;
     width: 100%;
+    padding-bottom: 30px;
   }
 
   .hero_content {
@@ -2143,6 +2144,7 @@ input[type="text"]:focus {
     height: auto;
     max-height: none;
     width: 100%;
+    padding-bottom: 30px;
   }
 
   .index_logo {
@@ -2173,6 +2175,13 @@ input[type="text"]:focus {
   ._service_wrap {
     flex-direction: column !important;
     margin-top: 0;
+  }
+
+  .hero_content:before {
+    height: 500px;
+    width: auto;
+    left: 10px;
+    right: 10px;
   }
 
   .top {

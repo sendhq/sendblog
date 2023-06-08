@@ -29,6 +29,7 @@ import missingImg from "../../components/img/person.png";
 
 // eslint-disable
 const WebsitePage = () => {
+  {/*}
   const [email, setEmail] = useState();
   const frontChatConfig = {
     chatId: "6d8da59cc3a54b72d42074dd08d7fc60",
@@ -58,6 +59,7 @@ const WebsitePage = () => {
       }
     }
   };
+*/}
 
   return (
     <div>
@@ -134,7 +136,7 @@ const WebsitePage = () => {
             property='og:see_also'
           />
           <meta
-            content='https://www.linkedin.com/company/send-shipping/'
+            content='https://www.linkedin.com/company/send-freight/'
             property='og:see_also'
           />
           <meta
@@ -142,12 +144,12 @@ const WebsitePage = () => {
             property='og:see_also'
           />
           <meta
-            content='https://twitter.com/sendDelivery'
+            content='https://twitter.com/sendfreight'
             property='og:see_also'
           />
           <meta name='twitter:card' content='summary_large_image' />
-          <meta name='twitter:site' content='@sendDelivery' />
-          <meta name='twitter:creator' content='@sendDelivery' />
+          <meta name='twitter:site' content='@sendfreight' />
+          <meta name='twitter:creator' content='@sendfreight' />
           <meta
             name='twitter:title'
             content='SEND | Digital Freight Forwarder & Customs Broker for Africa'
@@ -217,7 +219,7 @@ const WebsitePage = () => {
               <div class='clearfix index_logo column col_2'>
                 <a class='send-logotype logo' href='/#'></a>
               </div>
-              
+
               <nav class='navbar navbar_colapse clearfix column col_10'>
                 <div class='align_right mobile_show'>
                   <p class='color_white close_close_btn'>
@@ -253,7 +255,7 @@ const WebsitePage = () => {
                   </a>
                   <a
                     id='get-started-btn'
-                    href='https://app.trysend.com/register'
+                    href='https://calendly.com/send-freight/demo'
                     target='_blank'
                     class='btn'
                     style={{ display: "initial" }}
@@ -279,7 +281,7 @@ const WebsitePage = () => {
 
                   <a
                     id='get-started-btn'
-                    href='https://app.trysend.com/register'
+                    href='https://calendly.com/send-freight/demo'
                     target='_blank'
                     class='btn'
                     style={{ display: "initial" }}
@@ -318,6 +320,7 @@ const WebsitePage = () => {
 
           <section class='how_works feature' id='platform'>
             <div class='align_center mb4 pt4 col_6 margin_center'>
+
               <span class='color_initial m-b weight_bolder block_disp uppercased'>
                 What we do
               </span>
@@ -456,8 +459,7 @@ const WebsitePage = () => {
                 <a
                   id='get-started-btn-bottom'
                   class='btn get_started_ right'
-                  onClick={() => (document.documentElement.scrollTop = 10)}
-                >
+                  href="https://calendly.com/send-freight/demo">
                   Book a Demo
                 </a>
               </div>
@@ -516,9 +518,9 @@ const WebsitePage = () => {
           },
           "name": "SEND",
           "sameAs": [
-            "https://twitter.com/sendDelivery",
+            "https://twitter.com/sendfreight",
             "https://www.facebook.com/sendhq/",
-            "https://www.linkedin.com/company/send-shipping/",
+            "https://www.linkedin.com/company/send-freight/",
             "https://www.youtube.com/channel/UCMxgRsPEBn9gZ1qLOhgvbbA/",
             "https://www.instagram.com/sendfreight/"
           ],
@@ -682,7 +684,7 @@ const WebsitePage = () => {
                     {/* <ion-icon name='logo-instagram'></ion-icon> */}
                   </a>
                   <a
-                    href='https://www.linkedin.com/company/send-shipping'
+                    href='https://www.linkedin.com/company/send-freight'
                     class=''
                     target='_blank'
                   >

@@ -16,18 +16,21 @@ export const Footer = () => {
         <script src='https://chat-assets.frontapp.com/v1/chat.bundle.js'></script>
         {/* <script>{`${
           window.FrontChat ? window.FrontChat("init", frontChatConfig) : null
-        }`}</script> */}
+        }`}</script>
 
-        {/* <script>
+        <script>
           {window.FrontChat("init", {
             chatId: "6d8da59cc3a54b72d42074dd08d7fc60",
             useDefaultLauncher: true,
           })}
-        </script> */}
+        </script> 
+
         <script
           type='text/javascript'
           src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
         ></script>
+        <script type='text/javascript' src='js/script.js'></script> */}
+
         <script
           type='module'
           src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'
@@ -36,7 +39,8 @@ export const Footer = () => {
           nomodule
           src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'
         ></script>
-        {/* <script type='text/javascript' src='js/script.js'></script> */}
+       
+        
         <script type='application/ld+json'>{`
         {
           "@context": "http://schema.org",
@@ -75,9 +79,9 @@ export const Footer = () => {
           },
           "name": "SEND",
           "sameAs": [
-            "https://twitter.com/sendDelivery",
+            "https://twitter.com/sendfreight",
             "https://www.facebook.com/sendhq/",
-            "https://www.linkedin.com/company/send-shipping/",
+            "https://www.linkedin.com/company/send-freight/",
             "https://www.youtube.com/channel/UCMxgRsPEBn9gZ1qLOhgvbbA/",
             "https://www.instagram.com/sendfreight/"
           ],
@@ -202,8 +206,8 @@ export const Footer = () => {
               </a>
             </p>
             <p class='weight_bolder ion-chevron-right'>
-              <a class='color_white' href='mailto:support@send.ng'>
-                support@send.ng
+              <a class='color_white' href='mailto:care@send.ng'>
+                care@send.ng
               </a>
             </p>
           </div>
@@ -246,7 +250,7 @@ export const Footer = () => {
                 {/* <ion-icon name='logo-instagram'></ion-icon> */}
               </a>
               <a
-                href='https://www.linkedin.com/company/send-shipping'
+                href='https://www.linkedin.com/company/send-freight'
                 class=''
                 target='_blank'
               >

@@ -13,7 +13,7 @@ featuredpost: true
 featuredimage: /imgs/cover.jpg
 tags:
   - freight Covidrecovery supplychain
-author: Elijah Shokenu
+author: SEND Team
 category: Freight Updates
 ---
 

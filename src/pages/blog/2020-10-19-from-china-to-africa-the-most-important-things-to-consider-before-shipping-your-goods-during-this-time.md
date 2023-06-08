@@ -15,7 +15,7 @@ tags:
   - covid
   - shipping mode
   - shipping partner
-author: Team SEND
+author: SEND Team
 category: Freight Updates
 ---
 

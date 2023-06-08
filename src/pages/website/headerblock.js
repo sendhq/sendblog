@@ -39,7 +39,7 @@ export const HeaderLink = () => {
 
         <meta
           name='description'
-          content='SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs processes, trucking and warehousing. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.'
+          content='SEND manages the entire process of moving freight by air, ocean and road to and from Africa - including customs clearance, and supply chain finance. Our application provides instant quotes & bookings,  document management, cost transparency, notifications and tracking for your cargo.'
         />
         <meta name='referrer' content='no-referrer-when-downgrade' />
         <meta name='robots' content='all' />
@@ -75,7 +75,7 @@ export const HeaderLink = () => {
           property='og:see_also'
         />
         <meta
-          content='https://www.linkedin.com/company/send-shipping/'
+          content='https://www.linkedin.com/company/send-freight/'
           property='og:see_also'
         />
         <meta
@@ -83,12 +83,12 @@ export const HeaderLink = () => {
           property='og:see_also'
         />
         <meta
-          content='https://twitter.com/sendDelivery'
+          content='https://twitter.com/sendfreight'
           property='og:see_also'
         />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:site' content='@sendDelivery' />
-        <meta name='twitter:creator' content='@sendDelivery' />
+        <meta name='twitter:site' content='@sendfreight' />
+        <meta name='twitter:creator' content='@sendfreight' />
         <meta
           name='twitter:title'
           content='SEND | Digital Freight Forwarder & Customs Broker for Africa'
@@ -159,7 +159,7 @@ export const Header = () => {
         </a>
       </div>
       <div class='clearfix mb index_logo column col_2'>
-        <a class='send-logotype logo' href='/#'></a>
+        <a class='send-logotype logo' href='/'></a>
       </div>
       <nav class='navbar navbar_colapse clearfix column col_10'>
         <div class='align_right mobile_show'>
@@ -193,7 +193,7 @@ export const Header = () => {
           </a>
           <a
             id='get-started-btn'
-            href='https://app.trysend.com/register'
+            href='https://calendly.com/send-freight/demo'
             target='_blank'
             class='btn'
             style={{ display: "initial" }}
