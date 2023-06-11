@@ -108,7 +108,7 @@ const Footer = class extends React.Component {
               <p className='col_10'>
                 SEND is a digital freight forwarder and customs broker for
                 Africa. We manage the entire process of shipping freight by air
-                and ocean, including customs clearance and final delivery
+                and ocean, including customs clearance and supply chain finance
                 &mdash; using software to provide instant quotes, document
                 management, cost transparency and control across your supply
                 chain.

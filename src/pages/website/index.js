@@ -654,7 +654,7 @@ const WebsitePage = () => {
                 <p class='mb3 col_9 footer_talk'>
                   SEND is a digital freight forwarder and customs broker for
                   Africa. We manage the entire process of shipping freight by
-                  air and ocean, including customs clearance and final delivery
+                  air and ocean, including customs clearance and supply chain finance
                   &mdash; using software to provide quotes, document management,
                   cost transparency and control across your supply chain.
                 </p>
