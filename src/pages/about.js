@@ -27,7 +27,7 @@ export const About = () => {
               <h1 class='majors mb _bold uppercased'>What we do</h1>
               <p class='mb4 about_us_talk'>
                 SEND makes it easy to ship cargo to and from Africa, by managing
-                the entire process &mdash; Air, Ocean, Customs, Warehousing
+                the entire process &mdash; Air, Ocean, Customs clearance, Supply chain financing
                 &mdash; using software, refined processes and smart people. We
                 have a long term vision of enabling African trade by better
                 connecting more African countries with each other and the global
@@ -96,6 +96,7 @@ export const About = () => {
                   </li>
                 </ul>
               </div>
+
               <div style={{ height: "100vh", width: "100%" }} class='map_box'>
                 <GoogleMapReact
                   bootstrapURLKeys={{

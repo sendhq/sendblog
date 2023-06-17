@@ -156,8 +156,7 @@ export const Terms = () => {
                   and charges set forth in the Quote without offset. The
                   Customer agrees to pay Broker without offset or withholding of
                   any type and within fifteen (14) days of receiving the
-                  invoice, with interest accruing monthly at a rate of one
-                  percent (1%) per month on any unpaid balance. Customers shall
+                  invoice, with interest accruing monthly at a rate of 2.5% per month on any unpaid balance. Customers shall
                   also be liable for any expenses, taxes, import and export
                   duties and fees and other governmental charges incurred in the
                   rendering of the Services, including attorney fees, the Broker

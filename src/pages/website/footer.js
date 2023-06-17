@@ -264,7 +264,7 @@ export const Footer = () => {
             <a href='about' target='_blank'>
               About
             </a>
-            <a href='https://blog.trysend.com' target='_blank'>
+            <a href='https://www.trysend.com/blog' target='_blank'>
               Blog
             </a>
             <a href='cookies' class='' target='_blank'>

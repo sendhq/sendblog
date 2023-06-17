@@ -132,12 +132,11 @@ export const Cookies = () => {
                 <h2>Contact Us</h2>
                 <p>
                   All access requests, questions, comments, complaints, and
-                  other requests regarding the cookies policy should be sent to
-                  <a href='support@send.ng.'>support@send.ng.</a>
+                  other requests regarding the cookies policy should be sent to <a href='care@send.ng.'> care@send.ng.</a>
                 </p>
                 <p>
                   We may request additional details from you regarding your
-                  complaints and keep records of your requests and resolution
+                  complaints and keep records of your requests and resolution.
                 </p>
               </div>
             </div>

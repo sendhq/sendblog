@@ -182,6 +182,9 @@ export const Header = () => {
           >
             Get a Quote
           </a>
+          <a href='blog' target='_blank'>
+            Our Blog
+          </a>
         </ul>
         <ul class='clearfix right'>
           <a

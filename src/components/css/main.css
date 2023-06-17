@@ -380,6 +380,12 @@ p.bigger_p {
   margin-top: 100px;
 }
 
+.static_section h3, .static_section h2 {
+  font-family: 'Inter', 'Gilroy-Semibold', sans-serif;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
 .about_us_talk {
   font-size: 120%;
   line-height: 2;
