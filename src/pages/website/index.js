@@ -29,7 +29,8 @@ import missingImg from "../../components/img/person.png";
 
 // eslint-disable
 const WebsitePage = () => {
-  {/*}
+  {
+    /*}
   const [email, setEmail] = useState();
   const frontChatConfig = {
     chatId: "6d8da59cc3a54b72d42074dd08d7fc60",
@@ -59,7 +60,8 @@ const WebsitePage = () => {
       }
     }
   };
-*/}
+*/
+  }
 
   return (
     <div>
@@ -234,13 +236,13 @@ const WebsitePage = () => {
                   <a href='/#services' class='_anchor'>
                     Our Services
                   </a>
-                  <a
+                  {/* <a
                     href='https://app.trysend.com/guest-quote'
                     class='covid_color'
                     target='_blank'
                   >
                     Get a Quote
-                  </a>
+                  </a> */}
                   <a href='blog' target='_blank'>
                     Our Blog
                   </a>
@@ -267,28 +269,27 @@ const WebsitePage = () => {
             </header>
 
             <div class='hero_content container clearfix'>
+              <div class='top col_8'>
+                <h1 class='m-b col_10'>
+                  Digital freight forwarder and supply chain operating system.
+                </h1>
 
-                <div class='top col_8'>
-                  <h1 class='m-b col_10'>
-                    Digital freight forwarder and supply chain operating system.
-                  </h1>
+                <h4 class='col_10 mb4'>
+                  We manage the entire process of shipping cargo via Air and
+                  Ocean, from suppliers around the world to your destination
+                  &mdash; including customs clearance, trucking and warehousing.
+                </h4>
 
-                  <h4 class='col_10 mb4'>
-                    We manage the entire process of shipping cargo via Air and
-                    Ocean, from suppliers around the world to your destination
-                    &mdash; including customs clearance, trucking and warehousing.
-                  </h4>
-
-                  <a
-                    id='get-started-btn'
-                    href='https://calendly.com/send-freight/demo'
-                    target='_blank'
-                    class='btn'
-                    style={{ display: "initial" }}
-                  >
-                    Book a Demo
-                  </a>
-                </div>
+                <a
+                  id='get-started-btn'
+                  href='https://calendly.com/send-freight/demo'
+                  target='_blank'
+                  class='btn'
+                  style={{ display: "initial" }}
+                >
+                  Book a Demo
+                </a>
+              </div>
 
               <div class='_inner'>
                 <div class='dummy_notif one'>
@@ -311,16 +312,11 @@ const WebsitePage = () => {
                   </div>
                 </div>
               </div>
-              
             </div>
-
-
-
           </section>
 
           <section class='how_works feature' id='platform'>
             <div class='align_center mb4 pt4 col_6 margin_center'>
-
               <span class='color_initial m-b weight_bolder block_disp uppercased'>
                 What we do
               </span>
@@ -459,7 +455,8 @@ const WebsitePage = () => {
                 <a
                   id='get-started-btn-bottom'
                   class='btn get_started_ right'
-                  href="https://calendly.com/send-freight/demo">
+                  href='https://calendly.com/send-freight/demo'
+                >
                   Book a Demo
                 </a>
               </div>
@@ -654,9 +651,10 @@ const WebsitePage = () => {
                 <p class='mb3 col_9 footer_talk'>
                   SEND is a digital freight forwarder and customs broker for
                   Africa. We manage the entire process of shipping freight by
-                  air and ocean, including customs clearance and supply chain finance
-                  &mdash; using software to provide quotes, document management,
-                  cost transparency and control across your supply chain.
+                  air and ocean, including customs clearance and supply chain
+                  finance &mdash; using software to provide quotes, document
+                  management, cost transparency and control across your supply
+                  chain.
                 </p>
                 <div class='width_100 social_icons'>
                   <a

@@ -175,13 +175,13 @@ export const Header = () => {
           <a href='/#services' class='_anchor'>
             Our Services
           </a>
-          <a
+          {/* <a
             href='https://app.trysend.com/guest-quote'
             class='covid_color'
             target='_blank'
           >
             Get a Quote
-          </a>
+          </a> */}
           <a href='blog' target='_blank'>
             Our Blog
           </a>
