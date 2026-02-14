@@ -140,6 +140,7 @@
     "highlight.js": ">=9.18.2",
     "bl": ">=4.0.3",
     "serialize-javascript": ">=3.1.0",
-    "gatsby": ">=4.25.7"
+    "gatsby": ">=4.25.7",
+    "webpack": ">=5.104.1"
   }
 }
