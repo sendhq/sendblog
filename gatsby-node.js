@@ -31,24 +31,35 @@ exports.createPages = ({ actions, graphql }) => {
 
     const posts = result.data.allMarkdownRemark.edges;
 
+    const templatesDir = path.resolve("src/templates");
+
     posts.forEach((edge) => {
       const id = edge.node.id;
       const templateKey = String(edge.node.frontmatter.templateKey);
-      // Sanitize templateKey to prevent path traversal attacks
+
+      // Allowlist: only permit alphanumerics, hyphens, and underscores.
+      // This blocks path traversal sequences (../, ..\, /, \, null bytes, etc.)
+      // before any path construction occurs.
       if (!/^[a-zA-Z0-9_-]+$/.test(templateKey)) {
         console.error(
-          `Invalid templateKey "${templateKey}" — skipping page creation`
+          `Invalid templateKey "${templateKey}" — skipping page creation`,
         );
         return;
       }
-      const templatePath = path.resolve(`src/templates/${templateKey}.js`);
-      const templatesDir = path.resolve("src/templates");
-      if (!templatePath.startsWith(templatesDir)) {
+
+      // Construct the resolved path only after the allowlist check passes.
+      const templatePath = path.resolve(templatesDir, `${templateKey}.js`);
+
+      // Secondary boundary check: ensure the resolved path stays within
+      // src/templates/. The trailing separator prevents a match on a sibling
+      // directory that shares the same prefix (e.g. src/templates-evil/).
+      if (!templatePath.startsWith(templatesDir + path.sep)) {
         console.error(
-          `Template path escapes templates directory — skipping page creation`
+          `Template path escapes templates directory — skipping page creation`,
         );
         return;
       }
+
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -93,7 +104,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode }).replace(
       /\d{4}-\d{2}-\d{2}-/,
-      ""
+      "",
     );
 
     createNodeField({
